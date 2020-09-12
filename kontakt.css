@@ -8,14 +8,13 @@
 body {
     display: flex;
   flex-direction: column;
-    background-color: #f1f1f1;
+    background-color: black;
     font-family: times new roman; 
 }
 
 .parent-flex /*Detta är conteinern för alla flexboxes*/
 {
     min-height: 100vh;
-    border: 0px 20px 0px 20px solid #f1f1f1; 
     display: flex; 
     flex-direction: column;
     justify-content: space-between;
@@ -29,17 +28,15 @@ body {
 .child1 /*Conteinern för headern*/
 {
     height: 100px;
-    background: rgba(68, 107, 4, 0.61); 
-    box-shadow: 3px 3px rgba(53, 83, 3, 0.678);
+    background: black; 
     order: 1;
     position: sticky;
-    top: 0;
-   
-    
+    top: 0;   
 }
 
 .headerTitle
 {
+  color: rgb(199, 194, 194);
   padding: 10px;
   margin-left: 40px;
     text-align: left; 
@@ -47,19 +44,17 @@ body {
     display: inline-block;
 }
 
-/* Här börjar menyn: Style The Dropdown Button */
+/* Här börjar menyn: vart menyn ska vara i headern */
 .menyn
 {
 float: right; 
 margin-right: 40px;
-
-
 }
 
+/*Strecken som är menyn i headern */
 .hamburgare {
-    background-color: #f1f1f1;
-    color: black;
-    padding: 16px;
+    background-color: black;
+     padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
@@ -67,9 +62,10 @@ margin-right: 40px;
 
   .line 
 {
+ 
   width: 25px; 
   height: 1.5px; 
-    background: black;
+    background: white;
     margin: 5px;
 }
   
@@ -85,7 +81,7 @@ margin-right: 40px;
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 250px;
+    min-width: 100px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
@@ -111,19 +107,35 @@ margin-right: 40px;
     background-color: #bebdbd;
   }
 
-  /*Conteiner 2 med forumläret*/
-.main
+/*Bilden på kontakt-sidan*/
+.headerPicture
 {
-  /* height: 600px; */
-    background: #f1f1f1; 
-    order: 2;
-    flex-grow: 2;
-    text-align: center;
-    /*margin-bottom: 130px;*/
+  order: 2;
+  margin: 0;
+  padding: 0;
 }
 
-/*Här börjar koden för Kontakt formuläret*/ 
+.headerPicture img 
+{
+  position: relative;
+  width: 100%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+   z-index: -1;
+ 
+}
 
+  /*flexbox - barn 3 med forumläret*/
+.main
+{
+    background: #f1f1f1; 
+    order: 3;
+    text-align: center;
+ }
+
+/*Här börjar koden för Kontakt formuläret*/ 
 #formular 
 {
   
@@ -169,7 +181,7 @@ form input#epost:valid:not(:placeholder-shown)
 .knapp
 {
     font-family: 'Times New Roman';
-    background-color:rgba(55, 88, 3, 0.705);  
+    background-color:rgb(199, 194, 194);  
     font-size: 14px;
     color: black;
     text-align: center;
@@ -177,16 +189,16 @@ form input#epost:valid:not(:placeholder-shown)
     display: inline-block;
     border-radius: 36px;
     text-decoration: none;
-    box-shadow: 2px 2px rgba(42, 66, 2, 0.829);
+    box-shadow: 2px 2px rgb(94, 91, 91);
     cursor: pointer; 
   }
   
   .knapp:hover
   {
     font-family: 'Times New Roman';
-    background-color: rgba(79, 124, 5, 0.705);
+    background-color: rgb(223, 219, 219);
     Padding: 7px 12px;
-    color: rgb(22, 21, 21);;
+    color: rgb(22, 21, 21);
     font-size: 14px;
   }
 
@@ -194,21 +206,20 @@ form input#epost:valid:not(:placeholder-shown)
 /*Footer-sektionen*/
 .child4
 {
-   margin-top: 90px;
-    background-color: rgba(68, 107, 4, 0.61); ; 
-    order: 3; 
+  padding: 20px;
+  height: 130px;
+   margin-top: 30px;
+    background-color: black;  
+    order: 4; 
 }
 
 footer 
 {
+  color: rgb(199, 194, 194);
     text-align: center;
+    font-size: 12px;
 }
 
-/*Copyright 2020*/
-.footerText
-{
-  font-size: 12px;
-}
 
 /* Kod för javascript så att ett meddelande går ut när man klickar på "skicka" knappen*/
 .reply
@@ -230,8 +241,8 @@ footer
 {
 margin: 20px; 
 padding: 10px 30px; 
-background-color: rgba(0,0,0,0.2);
-box-shadow: 2px 2px rgba(46, 45, 44, 0.664); 
+background-color: rgb(199, 194, 194);
+box-shadow: 2px 2px rgb(34, 33, 32);
 border: none; 
 font-family: times new roman; 
 cursor: pointer; 
@@ -242,7 +253,7 @@ border-radius: 36px;
 {
 margin: 20px; 
 padding: 10px 30px; 
-background-color: rgba(79, 124, 5, 0.705);
+background-color: rgb(223, 219, 219);
 border: none; 
 font-family: times new roman; 
 cursor: pointer; 

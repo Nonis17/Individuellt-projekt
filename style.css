@@ -8,17 +8,15 @@
 body {
     display: flex;
   flex-direction: column;
-    background-color: #f1f1f1;
+    background-color: black;
     font-family: times new roman; 
 }
 
 .parent-flex /*Detta är conteinern för alla flexboxes*/
 {
-    min-height: 100vh;
-    border: 0px 20px 0px 20px solid #f1f1f1; 
+    min-height: 100vh; 
     display: flex; 
     flex-direction: column;
-    justify-content: space-between;
   }
 
 .parent-flex > * 
@@ -31,14 +29,14 @@ body {
   position: sticky;
   top: 0;
     height: 100px;
-    background: rgba(68, 107, 4, 0.61); 
-    box-shadow: 3px 3px rgba(53, 83, 3, 0.678);
+    background: black;  
     order: 1;
     
 }
 
 .headerTitle
 {
+  color: white;
   padding: 10px;
   margin-left: 40px;
     text-align: left; 
@@ -55,19 +53,19 @@ margin-right: 40px;
 }
 
 .hamburgare {
-    background-color: #f1f1f1;
-    color: black;
+    background-color: black;
     padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
+    border-radius: 20px;
   }
 
   .line 
 {
     width: 25px; 
     height: 1.5px; 
-    background: black;
+    background: white;
     margin: 5px;
 }
   
@@ -83,7 +81,7 @@ margin-right: 40px;
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 250px;
+    min-width: 100px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
@@ -112,55 +110,71 @@ margin-right: 40px;
   /*Sektionen med bild*/
 .main
 {
-   height: 400px;
-    background: #f1f1f1; 
-    order: 2;
-    flex-grow: 1;
-    text-align: center;
-    margin-bottom: 50px;
+margin: 0;
+padding: 0;
+order: 2;
+margin-bottom: 50px;
 }
 
 main img 
 {
-    width: 300px;
-    height: 400px;
-   
+  position: relative;
+  width: 100%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+   z-index: -1;
+ 
 }
 
 /*Tredje conteinern: Textdelen*/
 .child3
 {
-
-    background-color: rgba(68, 107, 4, 0.61); ; 
+  min-height: 300px;
+    background-color: black; 
     order: 3;
-    flex-grow: 1;
-  
-
 }
-.child3 p{
+
+
+.textRutor
+{
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.textEtt
+{
+  color: rgb(119, 80, 8);
+  border-style: dotted;
+  border-top: none;
+  border-bottom: none; 
+  border-right: none;
   margin: 10px;
   text-align: left;
+  padding: 30px;
+}
+
+.textEtt h3
+{
+  margin-bottom: 10px;
 }
 
 /*Footer-sektionen*/
-.child4
+.footer
 {
-   margin-top: 50px;
+  padding: 20px;
     height: 130px;
-    background-color: rgba(68, 107, 4, 0.61); ; 
+    background-color: rgb(109, 62, 9);  
     order: 4;
-   
-}
+  
+   }
 
 footer 
 {
     text-align: center;
-}
-
-/*Copyright 2020*/
-.footerText
-{
-  font-size: 12px;
+    font-size: 12px;
 }
 
 /* Kod för javascript så att ett meddelande går ut när man klickar på "skicka" knappen*/
@@ -183,8 +197,8 @@ footer
 {
 margin: 20px; 
 padding: 10px 30px; 
-background-color: rgba(0,0,0,0.2);
-box-shadow: 2px 2px rgba(46, 45, 44, 0.664); 
+background-color: rgb(119, 80, 8);
+box-shadow: 2px 2px rgb(27, 18, 2);
 border: none; 
 font-family: times new roman; 
 cursor: pointer; 
@@ -195,7 +209,7 @@ border-radius: 36px;
 {
 margin: 20px; 
 padding: 10px 30px; 
-background-color: rgb(207, 202, 195);
+background-color: rgb(168, 114, 12);
 border: none; 
 font-family: times new roman; 
 cursor: pointer; 
@@ -284,4 +298,43 @@ border-radius: 36px;
   font-family: times new roman; 
   font-size: 8px;
   cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .menyn
+  {
+  float: right; 
+  margin-right: 200px;
+    }
+}
+
+@media only screen and (max-width: 1366px) {
+  .menyn
+  {
+  float: right; 
+  margin-right: 40px;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  .headerTitle{font-size: 1em;}
+
+  .textRutor
+{
+  display: block;
+  flex-direction: row;
+}
+
+footer{min-height: 150px;}
+}
+
+@media only screen and (max-width: 300px) {
+
+  .child1{min-width: 100%;}
+
+  .headerTitle{font-size: 1em;}
+
 }
