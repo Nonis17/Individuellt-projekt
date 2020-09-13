@@ -8,7 +8,6 @@
 body {
     display: flex;
   flex-direction: column;
-    background-color: black;
     font-family: times new roman; 
 }
 
@@ -145,7 +144,7 @@ margin-right: 40px;
 }
 
 /*Gör att input-rutorna är mjuka i kanterna*/
-#formular input[type="text"], input[type="telefon"], input[type="epost"]
+#formular input[type="text"], input[type="phone"], input[type="email"]
 {
 border-radius: 4px;
 }
@@ -174,7 +173,6 @@ form input#epost:valid:not(:placeholder-shown)
 .bio 
 {
   margin-top: 20px;
-  opacity: 0.8;
   border-radius: 4px;
 }
 
@@ -207,17 +205,16 @@ form input#epost:valid:not(:placeholder-shown)
 .child4
 {
   padding: 20px;
-  height: 130px;
-   margin-top: 30px;
-    background-color: black;  
-    order: 4; 
+  min-height: 130px;
+  background-color: black;  
+  order: 4; 
 }
 
 footer 
 {
   color: rgb(199, 194, 194);
-    text-align: center;
-    font-size: 12px;
+  text-align: center;
+  font-size: 12px;
 }
 
 
@@ -239,7 +236,7 @@ footer
 
 .button /*Prenumerera-knappen*/
 {
-margin: 20px; 
+margin: 15px; 
 padding: 10px 30px; 
 background-color: rgb(199, 194, 194);
 box-shadow: 2px 2px rgb(34, 33, 32);
@@ -251,8 +248,7 @@ border-radius: 36px;
 
 .button:hover /*När man hovrar över prenumerera knappen*/
 {
-margin: 20px; 
-padding: 10px 30px; 
+
 background-color: rgb(223, 219, 219);
 border: none; 
 font-family: times new roman; 
@@ -283,12 +279,14 @@ border-radius: 36px;
 }
 
 .popup h2{
+  color: black;
   font-size: 14px;
   margin: 15px;
 }
 
 .popup /*Själva popup-rutan*/
 {
+  color: black;
   position: relative;
   font-family: times new roman; 
   background-color:white; 
@@ -305,7 +303,7 @@ border-radius: 36px;
 {
       margin: 20px; 
       padding: 10px 30px; 
-      background-color: rgba(55, 88, 3, 0.705); 
+      background-color:rgb(199, 194, 194);   
       border: none; 
       font-family: times new roman; 
       cursor: pointer; 
@@ -316,7 +314,7 @@ border-radius: 36px;
       {
       margin: 20px; 
       padding: 10px 30px; 
-      background-color: rgba(68, 107, 4, 0.61);
+      background-color: rgb(223, 219, 219);
       font-family: times new roman; 
       cursor: pointer; 
       border-radius: 36px;
@@ -341,4 +339,14 @@ border-radius: 36px;
   font-family: times new roman; 
   font-size: 8px;
   cursor: pointer;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  .headerTitle{font-size: 1em; margin-left: 0; margin-top: 19px; padding: 0;}
+
+  .menyn{margin-right: 0px;}
+
+
 }
