@@ -241,16 +241,36 @@ border-radius: 36px;
 
 .popup h2{
   font-size: 14px;
-  margin: 15px;
+  margin: 20px;
 }
+
+/*Gör att input-rutorna är mjuka i kanterna*/
+form input[type="text"], input[type="email"]
+{
+padding: 7px 30px 7px 2px;
+border-radius: 4px;
+}
+
+form label
+{
+  display: block;
+  color: black;
+}
+
+form input[type="text"], input[type="email"] {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
 
 .popup /*Själva popup-rutan*/
 {
   position: relative;
   font-family: times new roman; 
   background-color:white; 
-  width: 30%;
-  height: 30%;
+  min-width: 30%;
+  min-height: 30%;
   display: flex;
   justify-content: space-around;
   align-items:center; 
@@ -283,6 +303,7 @@ border-radius: 36px;
 {
   opacity: 0;
   transition: visibility 0s, opacity 0.5s; 
+  display: block;
 }
 
 .tack-active

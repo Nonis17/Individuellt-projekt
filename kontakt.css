@@ -135,27 +135,46 @@ margin-right: 40px;
  }
 
 /*Här börjar koden för Kontakt formuläret*/ 
-#formular 
+fieldset 
 {
-  
-  margin-top: 40px;
-  text-align:center;
-  
+  padding: 20px;
+  background-color:rgb(199, 194, 194); 
+  margin-top: 10px;
+  margin-bottom: 30px;
+  box-shadow: 3px 3px rgba(15, 14, 14, 0.589);  
 }
 
 /*Gör att input-rutorna är mjuka i kanterna*/
-#formular input[type="text"], input[type="phone"], input[type="email"]
+fieldset input[type="text"], input[type="phone"], input[type="email"]
 {
+padding: 7px 30px 7px 2px;
 border-radius: 4px;
 }
 
-/*avståndet mellan titeln och formuläret*/
-#formular h1 
+form label
 {
-  margin-bottom: 40px;
+  display: block;
+  color: black;
 }
 
-form input#epost:valid:not(:placeholder-shown)
+form input[type="text"], input[type="email"] {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+
+
+/*avståndet mellan titeln och formuläret*/
+legend
+{
+font-size: 20px;
+margin-bottom: 40px;
+padding: 10px;
+letter-spacing: 0.1em;
+}
+
+form input#email:valid:not(:placeholder-shown)
 {
   
   border: 2px solid rgb(33, 141, 33);
@@ -178,16 +197,13 @@ form input#epost:valid:not(:placeholder-shown)
 
 .knapp
 {
-    font-family: 'Times New Roman';
-    background-color:rgb(199, 194, 194);  
+    font-family: 'Times New Roman'; 
     font-size: 14px;
     color: black;
-    text-align: center;
     Padding: 7px 12px;
-    display: inline-block;
     border-radius: 36px;
     text-decoration: none;
-    box-shadow: 2px 2px rgb(94, 91, 91);
+    box-shadow: 2px 2px 2px rgb(114, 111, 111);
     cursor: pointer; 
   }
   
@@ -281,7 +297,7 @@ border-radius: 36px;
 .popup h2{
   color: black;
   font-size: 14px;
-  margin: 15px;
+  margin: 20px;
 }
 
 .popup /*Själva popup-rutan*/
@@ -290,8 +306,8 @@ border-radius: 36px;
   position: relative;
   font-family: times new roman; 
   background-color:white; 
-  width: 30%;
-  height: 30%;
+  min-width: 30%;
+  min-height: 30%;
   display: flex;
   justify-content: space-around;
   align-items:center; 
@@ -324,6 +340,8 @@ border-radius: 36px;
 {
   opacity: 0;
   transition: visibility 0s, opacity 0.5s; 
+  display: block;
+  
 }
 
 .tack-active

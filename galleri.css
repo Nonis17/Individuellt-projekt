@@ -218,6 +218,19 @@ border-radius: 36px;
   transition: visibility 0s, opacity 0.5s; 
 }
 
+form label
+{
+  display: block;
+  color: black;
+}
+
+form input[type="text"], input[type="email"] {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+
 .bg-active /*popup-rutan blir synlig*/
 {
   visibility: visible; 
@@ -227,7 +240,7 @@ border-radius: 36px;
 .popup h2{
   color: black;
   font-size: 14px;
-  margin: 15px;
+  margin: 20px;
 }
 
 .popup /*Själva popup-rutan*/
@@ -235,8 +248,8 @@ border-radius: 36px;
   position: relative;
   font-family: times new roman; 
   background-color:white; 
-  width: 30%;
-  height: 30%;
+  min-width: 30%;
+  min-height: 30%;
   display: flex;
   justify-content: space-around;
   align-items:center; 
@@ -270,6 +283,7 @@ border-radius: 36px;
 {
   opacity: 0;
   transition: visibility 0s, opacity 0.5s; 
+  display: block;
 }
 
 .tack-active
