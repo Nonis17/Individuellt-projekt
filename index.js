@@ -8,10 +8,9 @@ var tack = document.querySelector('.tack');
 var reply = document.querySelector('.reply');
 var skickaknapp = document.querySelector('.knapp');
 var textruta = document.querySelector('.bio');
-var epostInput = document.querySelector('.email');
 var nameInput = document.querySelector('.name');
-/*var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;*/
-
+var emailContact = document.querySelector('#contactEmail');
+var emailPren = document.querySelector('#prenumerationEmail');
 
 
 /*JavaScript som får en popup ruta att dyka upp och försvinna när man trycker på prenumereraknappen*/
@@ -27,8 +26,12 @@ xKnapp.addEventListener('click', function() {
 popUpButton.addEventListener('click', function() {
     popUpButton.style.cssText = "background-color: lightgrey;"; 
    tack.classList.add('tack-active'); 
-    
-    if (nameInput.value.length > 0 && epostInput.value.length > 0) {
+  
+   console.log(nameInput.value);
+   console.log(emailPren.value);
+
+    if (nameInput.value.length > 0 && emailPren.value.length > 0) {
+        tack.style.color = "black";
         tack.textContent = "Tack!"; 
     }
     
@@ -36,23 +39,17 @@ popUpButton.addEventListener('click', function() {
         tack.style.color = "#9f0000";
         tack.textContent = "Fyll i de tomma fältet"; 
     }
-      
-
 });
 
 /*När man trycker på skicka-knappen i kontakt-formuläret får man ett meddelande*/
 skickaknapp.addEventListener('click', function() {
     reply.classList.add('reply-active');
 
-    if (textruta.value.length > 0 && epostInput.value.length > 0) {
+    if (textruta.value.length > 0 && emailContact.value.length > 0 && nameInput.value.length > 0) {
         reply.style.color = "black";
         reply.textContent = "Tack! Vi svarar så fort vi kan"; 
     }
-    else if (textruta.value.length > 0 ) {
-        reply.style.color = "#9f0000";
-        reply.textContent = "Felaktig e-postadress"; 
-    }
-    else{
+     else{
         reply.style.color = "#9f0000";
         reply.textContent = "Fyll i de tomma fältet"; 
     }
