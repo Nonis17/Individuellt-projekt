@@ -9,8 +9,10 @@
     <meta name=”description” content=”Släng iväg ett mail om du vill bli kontaktad av oss”>
 </head>
 <body>
-    
-    
+     
+    <main>
+        
+    <!--Parent conteiner, flexbox-->
     <div class="parent-flex">
         <header class="child1">
            <h1 class="headerTitle">Klättring: Kontakt</h1>
@@ -22,26 +24,26 @@
                 <div class="line"></div>
                 <div class="line"></div>
             </button>
+            <nav>
             <div class="dropdown-content">
               <a href="index.html">Home</a>
               <a href="galleri.html">Galleri</a>
               <a href="kontakt.html">Kontakt</a>
-            </div>
+            </div></nav>
           </div> 
         </div>
-    
         </header>
-    
- <!--Bild-->
- <section class="headerPicture">
-    <img src="https://ct.counseling.org/wp-content/uploads/2015/11/Mountain-Climber-Help.jpg" alt="climber">
-</section>
 
-        <!--Kontaktformuläret i andra conteinern-->
-        <section class="main">
-      
-          
-         
+<!--First child item-->
+        <section class="headerPicture">
+            <img src="https://ct.counseling.org/wp-content/uploads/2015/11/Mountain-Climber-Help.jpg" alt="kontakt">
+        </section>
+
+
+
+        <!--Kontaktformuläret second child item-->
+        <section class="kontaktForm">
+            
                 <fieldset>
                 <legend>Fyll i formuläret, så kommer vi att höra av oss!</legend>
                 <form> <!-- "Form är containern för alla input-rutor-->
@@ -57,10 +59,9 @@
                                              
                 <p id="required">*obligatoriska fält</p>
               
-        <!-- en större box ruta att skriva text i-->
+        <!-- en större boxruta att skriva text i-->
         <label for="bio"></label>
         <textarea name="bio" value="" class="bio" cols="30" rows="18" placeholder="Skriv..." required></textarea>      
-   
         <br>
                 <span class="reply"></span><br>
                 <br>
@@ -68,11 +69,11 @@
                           
             </form></div>   
             </section></fieldset>
+        </main> 
 
-    
 
 
-   <!--sista conteinern-->
+   <!--sista item i conteinern-->
    <footer class="child4">
     <button class="button"><h3>Prenumerera på mitt nyhetsbrev!</h3></button>
 
@@ -102,8 +103,5 @@
     
     
     </div>
-
-
-
 </body>
 </html>

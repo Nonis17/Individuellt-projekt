@@ -6,14 +6,15 @@
     <link rel="stylesheet" href="style.css">
     <script defer src="index.js"></script>
     <title>Klättring för alla!</title>
-    <meta name=”description” content=”Bli inspirerad till att börja klättra, eller utveckla din klättring ännu mer!”>
+    <meta name=”description” content=” Allt om klättring! Bli inspirerad till att börja klättra, eller utveckla din klättring ännu mer!”>
 </head>
 <body>
-    
+<main>
+
 <!--Parent-flex är huvudconteinern för alla flexboxbarn-->    
 <div class="parent-flex">
 
-    <!--Första conteinern-->
+    <!--First item-->
     <header class="child1">
        <h1 class="headerTitle">Klättring</h1>
     
@@ -24,49 +25,52 @@
             <div class="line"></div>
             <div class="line"></div>
         </button>
+
+        <nav>
         <div class="dropdown-content">
           <a href="index.html">Home</a>
           <a href="galleri.html">Galleri</a>
           <a href="kontakt.html">Kontakt</a>
-        </div>
+        </div></nav>
       </div> 
     </div>
 </header>
 
-    <!--Andra conteinern-->
-    <main class="main">
+    <!--Second item-->
+    <section class="bigPicture">
         <img src="https://snowbrains.com/wp-content/uploads/2016/10/http-coresites-cdn.factorymedia.com-mpora_new-wp-content-uploads-2015-12-iStock_000052710440_Medium.jpg" alt="climber">
-    </main>
+    </section>
 
-     <!--Tredje conteinern-->
+     <!--Third item-->
     <div class="child3">
 
-        <!--En ny flexbox parent i tredje barnet hos parent-flex-->
-        <div class="textRutor">
+        <!--En ny flexbox parent i 'third item'-->
+        <article class="textRutor">
 
-            <!--Första conteinern-->
-            <article class="textEtt">
-                <h3>Klätterutrustning</h3>
+            <!--First item-->
+            <section class="textSektion">
+                <h2>Klätterutrustning</h2>
     <p>För att börja klättra kommer de behövas en del utrustning, det kan t ex behövas klätterskor, kritpåse, krita och träningskläder som är lämpliga för klättring! Vi tipsar om Add Nature som är en bra hemsida för all utrustning. Länken finns nedan </p>
     <br><a href="https://www.addnature.com/klattring/">Add Natures sortiment</a>
-</article>
+            </section>
     
-<article class="textEtt">
-    <h3>Bli inspirerad!</h3>
+<section class="textSektion">
+    <h2>Bli inspirerad!</h2>
     <p>En av de mest kända och duktiga klättrarna i världen heter Adam Ondra, han har en egen youtube-kanal där ni kan följa hans klätterkarriär och bli inspirerade till att själva bli klättermästare!</p>
     <br><a href="https://www.youtube.com/channel/UC8eNyF9eYwgr_K-Nl4gSHWw">Klicka här för att komma till Adam Ondras Youtube-kanal</a> 
-</article>
+</section>
     
-<article class="textEtt">
-    <h3>Klättercentret</h3>
+<section class="textSektion">
+    <h2>Klättercentret</h2>
     <p>Sveriges största klätterföretag! De bästa stället att lära sig att klättra! Kom in på prova-på, kurser eller klätterskola. De har både inomhus och utomhus-kurser! Eller varför inte bara och komma och klättra lite på egen hand? Ta med dina kompisar! </p>
     <br>
     <a href="https://www.klattercentret.se">Besök Klättercentrets hemsida här!</a>  
-  
+  </section>
 </article>
-</div></div>
+</div>
+</main> 
 
-     <!--Sista barnet av huvudconteinern-->
+     <!--Last item av 'parent-flex'-->
     <footer class="footer">
     <button class="button"><h3>Prenumerera på mitt nyhetsbrev!</h3></button>
 
@@ -93,6 +97,6 @@
 
 
 
-
+ 
 </body>
 </html>

@@ -9,12 +9,12 @@
     <meta name=”description” content=”Bli inspirerad av djuren, alla kan klättra!”>
 </head>
 <body>
-
+<main>
    
 <!--Parent-flex är huvudconteinern för alla flexboxbarn-->    
 <div class="parent-flex">
 
-    <!--Första conteinern-->
+    <!--First child item-->
     <header class="child1">
        <h1 class="headerTitle">Klättring: Galleri</h1>
     
@@ -25,22 +25,23 @@
             <div class="line"></div>
             <div class="line"></div>
         </button>
+        <nav>
         <div class="dropdown-content">
           <a href="index.html">Home</a>
           <a href="galleri.html">Galleri</a>
           <a href="kontakt.html">Kontakt</a>
-        </div>
+        </div></nav>
       </div> 
     </div>
 </header>
 
-<!--Tredje conteinern-->
+<!--Second child item-->
 <div class="child3">
 
 <!--grid-->
-<main class="gridPictures">
+<article class="gridPictures">
 
-<!--flexboxes innuti griden-->
+<!--flexbox innuti griden-->
 <section class="bildStorlek">
 <img src="https://1.bp.blogspot.com/-5_xPiYrTz8U/U6v9dOzr6YI/AAAAAAAAaeQ/1OfXTET8EcY/s1600/wallpaper-of-a-big-brown-bear-climbing-a-tree-hd-bears-wallpapers.jpg" alt="en björn klättrar">
 </section>
@@ -68,12 +69,16 @@
 <section class="bildStorlek">
 <img src="https://animals.sandiegozoo.org/sites/default/files/2017-07/animals-lemurs-coquerels-sifaka-tree.jpg" alt="lemur som klättrar">
 </section>
+
 <section class="bildStorlek">
 <img src="https://www.sierraclub.org/sites/www.sierraclub.org/files/styles/sierra_full_page_width/public/slideshows/KOA_032284_0.jpeg?itok=dSWBB92v" alt="koala som klättrar">
 </section>
-</div></div>
 
-<!--Sista barnet i flex-conteinern-->
+</article>
+</div></div>
+</main>
+
+<!--Last child item-->
     <footer class="footer">
     <button class="button"><h3>Prenumerera på mitt nyhetsbrev!</h3></button>
 

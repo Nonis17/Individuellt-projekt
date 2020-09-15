@@ -11,6 +11,22 @@ body {
     font-family: times new roman; 
 }
 
+/*.headerPicture {
+  z-index: -1;
+  background-image: url('https://ct.counseling.org/wp-content/uploads/2015/11/Mountain-Climber-Help.jpg');
+  opacity: 0.5;
+  content: "";
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}*/
+
 .parent-flex /*Detta är conteinern för alla flexboxes*/
 {
     min-height: 100vh;
@@ -33,14 +49,17 @@ body {
     top: 0;   
 }
 
+
 .headerTitle
 {
   color: rgb(199, 194, 194);
+  text-shadow: 2px 2px 4px orange;
   padding: 10px;
   margin-left: 40px;
     text-align: left; 
     letter-spacing: 2px;
     display: inline-block;
+  
 }
 
 /* Här börjar menyn: vart menyn ska vara i headern */
@@ -65,7 +84,9 @@ margin-right: 40px;
   width: 25px; 
   height: 1.5px; 
     background: white;
+    box-shadow: 1px 1px 3px orange;
     margin: 5px;
+
 }
   
   /* The container <div> - needed to position the dropdown content */
@@ -98,6 +119,7 @@ margin-right: 40px;
   
   /* Visa menyn när man hovrar över meny */
   .dropdown:hover .dropdown-content {
+
     display: block;
   }
   
@@ -127,8 +149,7 @@ margin-right: 40px;
 }
 
   /*flexbox - barn 3 med forumläret*/
-.main
-{
+.kontaktForm{
     background: #f1f1f1; 
     order: 3;
     text-align: center;
@@ -163,15 +184,24 @@ form input[type="text"], input[type="email"] {
   margin-bottom: 20px;
 }
 
+/*CSS animation*/
+@keyframes example {
+  from {font-weight: normal;}
+  to {font-weight: bold;}
+}
 
-
-/*avståndet mellan titeln och formuläret*/
+/*Fyll i formuläret, så kommer vi att höra av oss!*/
 legend
 {
+
 font-size: 20px;
 margin-bottom: 40px;
 padding: 10px;
 letter-spacing: 0.1em;
+animation-name: example;
+animation-duration: 8s;
+animation-iteration-count: infinite;
+animation-timing-function: ease-in-out;
 }
 
 form input#email:valid:not(:placeholder-shown)
@@ -233,6 +263,11 @@ footer
   font-size: 12px;
 }
 
+.footerText
+{
+  color: white; 
+}
+
 
 /* Kod för javascript så att ett meddelande går ut när man klickar på "skicka" knappen*/
 .reply
@@ -255,11 +290,12 @@ footer
 margin: 15px; 
 padding: 10px 30px; 
 background-color: rgb(199, 194, 194);
-box-shadow: 2px 2px rgb(34, 33, 32);
+text-shadow: 2px 2px 2px white, 0 0 25px white, 0 0 5px white;
 border: none; 
 font-family: times new roman; 
 cursor: pointer; 
 border-radius: 36px;
+transition: width 2s, height 2s, transform 2s;
 }
 
 .button:hover /*När man hovrar över prenumerera knappen*/
@@ -270,6 +306,7 @@ border: none;
 font-family: times new roman; 
 cursor: pointer; 
 border-radius: 36px;
+transform: rotate(360deg);
 }
 
 .button-bg /*popupen lägger sig över hela sidan*/
