@@ -63,11 +63,11 @@
               
         <!-- en större boxruta att skriva text i-->
         <label for="bio"></label>
-        <textarea name="bio" value="" class="bio" cols="30" rows="18" placeholder="Skriv..." required></textarea>      
+        <textarea name="bio" class="bio" cols="30" rows="18" placeholder="Skriv..." required></textarea>      
         <br>
                 <span class="reply"></span><br>
                 <br>
-                <button class="sendButton">Skicka</button>
+                <button type="submit" class="sendButton">Skicka</button>
                           
             </form></div>   
             </section></fieldset>
@@ -83,16 +83,16 @@
             <div class="popup">
             <h2>Prenumerera för att hänga med i svängarna!</h2>
 <form>
-        <label for="name">Namn:</label>
+        <label for="text">Namn:</label>
        
-        <input type="text" class="name" name="name" placeholder="namn" required>
+        <input type="text" class="name" id="namePopUp" placeholder="namn" required>
         <br>
         <label for="email">E-postadress: </label>
        
         <input type="email" class="email" id="prenumerationEmail" placeholder="e-post" required><br>
 </form>
        
-        <a class="popUpButton">Prenumerera</a>
+        <button type="submit" class="popUpButton">Prenumerera</button>
         <span class="thankYou">Tack!</span>
 <span class="x-close">X</span>
     </div>  </div>

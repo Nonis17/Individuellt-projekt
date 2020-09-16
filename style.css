@@ -30,11 +30,9 @@ body {
   top: 0;
     height: 100px;
     background: black;  
-    order: 1;
-    
+    order: 1; 
 }
  
-
 
 .headerTitle
 {
@@ -52,8 +50,8 @@ body {
 {
 float: right; 
 margin-right: 40px;
-
 }
+
 
 .hamburger {
     background-color: black;
@@ -63,6 +61,8 @@ margin-right: 40px;
     cursor: pointer;
     border-radius: 20px;
   }
+
+
 
 /*CSS animation*/
 @keyframes hamburgerMeny {
@@ -87,6 +87,7 @@ margin-right: 40px;
     position: relative;
     display: inline-block;
   }
+
   
   /* Dropdown Content (Gömd genom display none) */
   .dropdown-content {
@@ -153,8 +154,16 @@ margin-bottom: 50px;
 .textSection
 {
   display: flex;
-  flex-direction: row;
-  
+  flex-direction: row; 
+}
+
+/*För att verkligen markera vart man tab:ar på hemsidan*/
+.textInfo a:focus
+{
+  border: 1px solid white; 
+  padding: 10px;
+  font-size: 16px;
+  color: white;
 }
 
 .textInfo
@@ -209,29 +218,37 @@ footer
 /* Här börjar CSS för javascriptet "prenumerera på vårt nyhetsbrev!" */ 
 
 .button /*Prenumerera-knappen*/
-{
-margin: 20px; 
-padding: 10px 30px; 
-background-color: rgb(138, 79, 12);  
-box-shadow: 2px 2px rgb(44, 29, 3);
-text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.459), 0 0 25px rgb(192, 111, 18), 0 0 5px rgb(247, 143, 26);
-border: none; 
-font-family: times new roman; 
-cursor: pointer; 
-border-radius: 36px;
-transition: width 2s, height 2s, transform 2s;
-}
+  {
+    margin: 15px; 
+    padding: 10px 30px; 
+    text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.774), 0 0 25px rgba(255, 255, 255, 0.623), 0 0 5px rgba(255, 255, 255, 0.747);
+    background-image: linear-gradient(rgb(230, 149, 57), rgb(138, 79, 12));
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 1px solid rgba(255, 255, 255, 0.404);
+    border-top: none; 
+    font-family: times new roman; 
+    cursor: pointer; 
+    border-radius: 36px;
+    transition: width 2s, height 2s, transform 2s;
+    }
+
+    .button:focus
+    {
+      border: 2px solid rgba(255, 255, 255, 0.801); 
+      padding: 20px;
+      outline: none;
+    }
 
 .button:hover /*När man hovrar över prenumerera knappen*/
 {
 margin: 20px; 
 padding: 10px 30px; 
-background-color: rgba(138, 79, 12, 0.822);
 border: none; 
 font-family: times new roman; 
 cursor: pointer; 
 border-radius: 36px;
 transform: rotate(360deg);
+text-decoration: underline;
 }
 
 .button-bg /*popupen lägger sig över hela sidan*/
@@ -266,7 +283,14 @@ form input[type="text"], input[type="email"]
 {
 padding: 7px 30px 7px 2px;
 border-radius: 4px;
+margin-top: 10px;
+margin-bottom: 10px;
 }
+
+form input:focus
+  {
+    border: 3px solid black; 
+  }
 
 form label
 {
@@ -274,11 +298,6 @@ form label
   color: black;
 }
 
-form input[type="text"], input[type="email"] {
-  padding: 10px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
 
 
 .popup /*Själva popup-rutan*/
@@ -299,22 +318,37 @@ form input[type="text"], input[type="email"] {
 {
       margin: 20px; 
       padding: 10px 30px; 
-      background-color: rgb(199, 194, 194);  
-      border: none; 
+      background-image: linear-gradient(rgb(215, 218, 89), rgb(140, 189, 77));
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      border: 2px solid rgba(255, 255, 255, 0.603); 
+      border-top: none;
       font-family: times new roman; 
       cursor: pointer; 
       border-radius: 36px;
       }
+
+      .popUpButton:focus
+{
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.801); 
+  text-decoration: underline;
+  font-size: 16px;
+}
       
       .popUpButton:hover /*När man hovrar över popup-prenumerera-knappen*/
       {
-      margin: 20px; 
-      padding: 10px 30px; 
-      background-color: rgb(223, 219, 219);
-      font-family: times new roman; 
-      cursor: pointer; 
-      border-radius: 36px;
-    }
+        margin: 20px; 
+        padding: 10px 30px; 
+        background-image: linear-gradient(rgb(215, 218, 89), rgb(140, 189, 77));
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border: 2px solid rgba(255, 255, 255, 0.603); 
+        border-top: none;
+        font-family: times new roman; 
+        cursor: pointer; 
+        border-radius: 36px;
+        text-decoration:underline;
+
+        }
 
 .thankYou
 {

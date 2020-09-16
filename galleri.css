@@ -174,25 +174,35 @@ order: 3;
 
 .button /*Prenumerera-knappen*/
 {
-margin: 15px; 
-padding: 10px 30px; 
-background-color: rgb(199, 194, 194);
-text-shadow: 2px 2px 2px white, 0 0 25px white, 0 0 5px white;  
-border: none; 
-font-family: times new roman; 
-cursor: pointer; 
-border-radius: 36px;
-transition: width 2s, height 2s, transform 2s;
+  margin: 15px; 
+  padding: 10px 30px; 
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.856), 0 0 25px rgba(255, 255, 255, 0.808), 0 0 5px rgba(255, 255, 255, 0.815);
+  background-image: linear-gradient(rgb(199, 194, 194), rgb(116, 117, 114));
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 2px solid rgba(255, 255, 255, 0.603);
+  border: none; 
+  font-family: times new roman; 
+  cursor: pointer; 
+  border-radius: 36px;
+  transition: width 2s, height 2s, transform 2s;
+  }
+
+  .button:focus
+{
+  border: 2px solid rgba(255, 255, 255, 0.801); 
+  padding: 20px;
+  outline: none;
+  text-decoration: underline;
 }
 
 .button:hover /*När man hovrar över prenumerera knappen*/
 {
-background-color: rgb(223, 219, 219);
 border: none; 
-font-family: times new roman; 
+font-family: times new roman;   
 cursor: pointer; 
 border-radius: 36px;
 transform: rotate(360deg);
+text-decoration: underline;
 }
 
 .button-bg /*popupen lägger sig över hela sidan*/
@@ -215,6 +225,7 @@ form label
 {
   display: block;
   color: black;
+  font-size: 16px;
 }
 
 form input[type="text"], input[type="email"] {
@@ -223,6 +234,10 @@ form input[type="text"], input[type="email"] {
   margin-bottom: 20px;
 }
 
+form input:focus
+  {
+    border: 3px solid black; 
+  }
 
 .bg-active /*popup-rutan blir synlig*/
 {
@@ -250,27 +265,43 @@ form input[type="text"], input[type="email"] {
   border-radius: 20px;
 }
 
+
 .popUpButton /*Knappen på popupen*/
 {
-      margin: 20px; 
-      padding: 10px 30px; 
-      background-color: rgb(199, 194, 194); 
-      border: none; 
-      font-family: times new roman; 
-      cursor: pointer; 
-      border-radius: 36px;
-      }
-      
+  margin: 20px; 
+  padding: 10px 30px; 
+  background-image: linear-gradient(rgb(215, 218, 89), rgb(140, 189, 77));
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 2px solid rgba(255, 255, 255, 0.603); 
+  border-top: none;
+  font-family: times new roman; 
+  cursor: pointer; 
+  border-radius: 36px;
+  }
+
+  .popUpButton:focus
+  {
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.884); 
+    text-decoration: underline;
+    font-size: 16px;
+  }
+
       .popUpButton:hover /*När man hovrar över popup-prenumerera-knappen*/
       {
-      margin: 20px; 
-      padding: 10px 30px; 
-      background-color: rgb(223, 219, 219);
-      /*border: none; */
-      font-family: times new roman; 
-      cursor: pointer; 
-      border-radius: 36px;
-    }
+        margin: 20px; 
+        padding: 10px 30px; 
+        background-image: linear-gradient(rgb(215, 218, 89), rgb(140, 189, 77));
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border: 2px solid rgba(255, 255, 255, 0.603); 
+        border-top: none;
+        font-family: times new roman; 
+        cursor: pointer; 
+        border-radius: 36px;
+        text-decoration:underline;
+        }
+
+       
 
 .thankYou
 {
@@ -302,7 +333,7 @@ form input[type="text"], input[type="email"] {
 
 
 /*Djurbilderna*/
-  .bildStorlek img
+  .pictures img
 {
   max-width: 100%;
   max-height: 100%;
