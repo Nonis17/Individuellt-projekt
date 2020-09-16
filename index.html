@@ -21,11 +21,11 @@
     
        <div class="meny">
        <div class="dropdown">
-        <button class="hamburger">
+        <div class="hamburger">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
-        </button>
+        </div>
 
         <nav>
         <div class="dropdown-content">
@@ -38,15 +38,15 @@
 </header>
 
     <!--Second item-->
-    <section class="bigPicture">
+    <div class="bigPicture">
         <img src="https://snowbrains.com/wp-content/uploads/2016/10/http-coresites-cdn.factorymedia.com-mpora_new-wp-content-uploads-2015-12-iStock_000052710440_Medium.jpg" alt="climber">
-    </section>
+    </div>
 
      <!--Third item-->
     <div class="child3">
 
         <!--En ny flexbox parent i 'third item'-->
-        <article class="textSection">
+        <div class="textSection">
 
             <!--First item-->
             <section class="textInfo">
@@ -67,22 +67,22 @@
     <br>
     <a href="https://www.klattercentret.se">Besök Klättercentrets hemsida här!</a>  
   </section>
-</article>
 </div>
+</div></div>
 </main> 
 
      <!--Last item av 'parent-flex'-->
     <footer class="footer">
-    <button class="button"><h3>Prenumerera på mitt nyhetsbrev!</h3></button>
+    <button class="button">Prenumerera på mitt nyhetsbrev!</button>
 
         <div class="button-bg">
             <div class="popup">
                 <h2>Prenumerera för att hänga med i svängarna!</h2>
         <form>
-        <label for="namn">Namn: </label>
-        <input type="text" class="name" placeholder="namn" required><br>
+        <label for="prenumerationName">Namn: </label>
+        <input type="text" class="name" id="prenumerationName" placeholder="namn" required><br>
 
-        <label for="email">E-postadress: </label>
+        <label for="prenumerationEmail">E-postadress: </label>
         <input type="email" class="email" id="prenumerationEmail" placeholder="e-post" required><br>
     </form>
         <button type="submit" class="popUpButton">Prenumerera</button>
@@ -94,8 +94,6 @@
 <p class ="footerText">Copyright 2020</p>
        
     </footer>
-    </div>
-
 
 
  

@@ -188,10 +188,11 @@ margin-bottom: 50px;
 /*Footer-sektionen*/
 .footer
 {
+ 
   padding: 20px;
     height: 130px;
     background-color: rgb(156, 90, 13);  
-    order: 4;
+    
   
    }
 
@@ -226,7 +227,8 @@ footer
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border: 1px solid rgba(255, 255, 255, 0.404);
     border-top: none; 
-    font-family: times new roman; 
+    font-family: times new roman;
+    font-size: 16px;
     cursor: pointer; 
     border-radius: 36px;
     transition: width 2s, height 2s, transform 2s;

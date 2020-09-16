@@ -182,6 +182,7 @@ order: 3;
   border: 2px solid rgba(255, 255, 255, 0.603);
   border: none; 
   font-family: times new roman; 
+  font-size: 16px;
   cursor: pointer; 
   border-radius: 36px;
   transition: width 2s, height 2s, transform 2s;
