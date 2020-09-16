@@ -48,14 +48,14 @@ body {
 }
 
 /* Här börjar menyn: Style The Dropdown Button */
-.menyn
+.meny
 {
 float: right; 
 margin-right: 40px;
 
 }
 
-.hamburgare {
+.hamburger {
     background-color: black;
     padding: 16px;
     font-size: 16px;
@@ -65,7 +65,7 @@ margin-right: 40px;
   }
 
 /*CSS animation*/
-@keyframes hamburgareMeny {
+@keyframes hamburgerMeny {
   from {background-color: white;}
   to {background-color: orange;}
 }
@@ -77,7 +77,7 @@ margin-right: 40px;
     background: white;
     box-shadow: 1px 1px 3px orange;
     margin: 5px;
-    animation-name: hamburgareMeny;
+    animation-name: hamburgerMeny;
   animation-duration: 7s;
   animation-iteration-count: 3;
 }
@@ -150,14 +150,14 @@ margin-bottom: 50px;
 }
 
 
-.textRutor
+.textSection
 {
   display: flex;
   flex-direction: row;
   
 }
 
-.textSektion
+.textInfo
 {
   color: white;
   border-style: dotted;
@@ -170,7 +170,7 @@ margin-bottom: 50px;
   line-height: 24px;
 }
 
-.textSektion h2
+.textInfo h2
 {
   margin-bottom: 13px;
   text-shadow: 2px 2px 4px orange;
@@ -316,14 +316,14 @@ form input[type="text"], input[type="email"] {
       border-radius: 36px;
     }
 
-.tack
+.thankYou
 {
   opacity: 0;
   transition: visibility 0s, opacity 0.5s; 
   display: block;
 }
 
-.tack-active
+.thankYou-active
 {
   visibility: visible; 
   opacity: 1;
@@ -340,7 +340,7 @@ form input[type="text"], input[type="email"] {
 
 
 @media only screen and (max-width: 1024px) {
-  .menyn
+  .meny
   {
   float: right; 
   margin-right: 200px;
@@ -348,7 +348,7 @@ form input[type="text"], input[type="email"] {
 }
 
 @media only screen and (max-width: 1366px) {
-  .menyn
+  .meny
   {
   float: right; 
   margin-right: 40px;
@@ -360,7 +360,7 @@ form input[type="text"], input[type="email"] {
 
   .headerTitle{font-size: 1em;}
 
-  .textRutor
+  .textSection
 {
   display: block;
   flex-direction: row;

@@ -46,14 +46,14 @@ body {
 }
 
 /* Här börjar menyn: Style The Dropdown Button */
-.menyn
+.meny
 {
 float: right; 
 margin-right: 40px;
 
 }
 
-.hamburgare {
+.hamburger {
     background-color: black;
     padding: 16px;
     font-size: 16px;
@@ -134,7 +134,7 @@ order: 3;
 }
 
 /*Djurbilderna*/
-.bildStorlek
+.pictures
 {
   display: flex;
   flex-flow: column;
@@ -143,7 +143,7 @@ order: 3;
   padding: 1rem;
 }
 
-.bildStorlek img
+.pictures img
 {
   max-width: 600px;
   max-height: 375px;
@@ -151,13 +151,6 @@ order: 3;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-
-.text {
-  background-color: #4CAF50;
-  color: white;
-  font-size: 16px;
-  padding: 16px 32px;
-}
 
 /*Footer-sektionen*/
 .footer
@@ -175,18 +168,6 @@ order: 3;
   color: white; 
 }
 
-/* Kod för javascript så att ett meddelande går ut när man klickar på "skicka" knappen*/
-.reply
-{
-  font-size: 12px;
-  opacity: 0;
-  transition: visibility 0s, opacity 0.5s; 
-}
-.reply-active
-{
-    visibility: visible; 
-    opacity: 1;
-}
 
 
 /* Här börjar CSS för javascriptet "prenumerera på vårt nyhetsbrev!" */ 
@@ -213,8 +194,6 @@ cursor: pointer;
 border-radius: 36px;
 transform: rotate(360deg);
 }
-
-
 
 .button-bg /*popupen lägger sig över hela sidan*/
 {
@@ -293,14 +272,14 @@ form input[type="text"], input[type="email"] {
       border-radius: 36px;
     }
 
-.tack
+.thankYou
 {
   opacity: 0;
   transition: visibility 0s, opacity 0.5s; 
   display: block;
 }
 
-.tack-active
+.thankYou-active
 {
   visibility: visible; 
   opacity: 1;
@@ -319,9 +298,7 @@ form input[type="text"], input[type="email"] {
 
 @media only screen and (max-width: 600px) {
 
-  .headerTitle{font-size: 1em;}
-
- 
+.headerTitle{font-size: 1em;}
 
 
 /*Djurbilderna*/
@@ -343,6 +320,5 @@ form input[type="text"], input[type="email"] {
 {
   min-height: 150px;
 }
-
 
 }

@@ -4,16 +4,16 @@ var pButton = document.querySelector('.button');
 var buttonBg = document.querySelector('.button-bg');
 var xKnapp = document.querySelector('.x-close'); 
 var popUpButton = document.querySelector('.popUpButton');
-var tack = document.querySelector('.tack'); 
+var thankYou = document.querySelector('.thankYou'); 
 var reply = document.querySelector('.reply');
-var skickaknapp = document.querySelector('.knapp');
-var textruta = document.querySelector('.bio');
+var sendButton = document.querySelector('.sendButton');
+var textBio = document.querySelector('.bio');
 var nameInput = document.querySelector('.name');
 var emailContact = document.querySelector('#contactEmail');
 var emailPren = document.querySelector('#prenumerationEmail');
 
 
-/*JavaScript som får en popup ruta att dyka upp och försvinna när man trycker på prenumereraknappen*/
+/*Funktion: JavaScript som får en popup ruta att dyka upp och försvinna när man trycker på prenumereraknappen*/
 pButton.addEventListener('click', function() {
     buttonBg.classList.add('bg-active');
 });
@@ -22,30 +22,27 @@ xKnapp.addEventListener('click', function() {
     buttonBg.classList.remove('bg-active');
 });
 
-/*Tack-texten dyker upp när man fyllt i epostadressen i prenumerationen*/
+/*Funktion: Tack-texten dyker upp när man fyllt i epostadressen i prenumerationen*/
 popUpButton.addEventListener('click', function() {
     popUpButton.style.cssText = "background-color: lightgrey;"; 
-   tack.classList.add('tack-active'); 
+    thankYou.classList.add('thankYou-active'); 
   
-   console.log(nameInput.value);
-   console.log(emailPren.value);
-
-    if (nameInput.value.length > 0 && emailPren.value.length > 0) {
-        tack.style.color = "black";
-        tack.textContent = "Tack!"; 
+      if (nameInput.value.length > 0 && emailPren.value.length > 0) {
+        thankYou.style.color = "black";
+        thankYou.textContent = "Tack!"; 
     }
     
     else{
-        tack.style.color = "#9f0000";
-        tack.textContent = "Fyll i de tomma fältet"; 
+        thankYou.style.color = "#9f0000";
+        thankYou.textContent = "Fyll i de tomma fältet"; 
     }
 });
 
-/*När man trycker på skicka-knappen i kontakt-formuläret får man ett meddelande*/
-skickaknapp.addEventListener('click', function() {
+/*Funktion: När man trycker på skicka-knappen i kontakt-formuläret får man ett meddelande*/
+sendButton.addEventListener('click', function() {
     reply.classList.add('reply-active');
 
-    if (textruta.value.length > 0 && emailContact.value.length > 0 && nameInput.value.length > 0) {
+    if (textBio.value.length > 0 && emailContact.value.length > 0 && nameInput.value.length > 0) {
         reply.style.color = "black";
         reply.textContent = "Tack! Vi svarar så fort vi kan"; 
     }

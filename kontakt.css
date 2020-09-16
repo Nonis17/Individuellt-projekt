@@ -11,21 +11,6 @@ body {
     font-family: times new roman; 
 }
 
-/*.headerPicture {
-  z-index: -1;
-  background-image: url('https://ct.counseling.org/wp-content/uploads/2015/11/Mountain-Climber-Help.jpg');
-  opacity: 0.5;
-  content: "";
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}*/
 
 .parent-flex /*Detta är conteinern för alla flexboxes*/
 {
@@ -63,7 +48,7 @@ body {
 }
 
 /* Här börjar menyn: vart menyn ska vara i headern */
-.menyn
+.meny
 {
 float: right; 
 margin-right: 40px;
@@ -149,7 +134,7 @@ margin-right: 40px;
 }
 
   /*flexbox - barn 3 med forumläret*/
-.kontaktForm{
+.contactForm{
     background: #f1f1f1; 
     order: 3;
     text-align: center;
@@ -225,7 +210,7 @@ form input#email:valid:not(:placeholder-shown)
   border-radius: 4px;
 }
 
-.knapp
+.sendButton
 {
     font-family: 'Times New Roman'; 
     font-size: 14px;
@@ -237,7 +222,7 @@ form input#email:valid:not(:placeholder-shown)
     cursor: pointer; 
   }
   
-  .knapp:hover
+  .sendButton:hover
   {
     font-family: 'Times New Roman';
     background-color: rgb(223, 219, 219);
@@ -373,7 +358,7 @@ transform: rotate(360deg);
       border-radius: 36px;
     }
 
-.tack
+.thankYou
 {
   opacity: 0;
   transition: visibility 0s, opacity 0.5s; 
@@ -381,7 +366,7 @@ transform: rotate(360deg);
   
 }
 
-.tack-active
+.thankYou-active
 {
   visibility: visible; 
   opacity: 1;
@@ -401,7 +386,7 @@ transform: rotate(360deg);
 
   .headerTitle{font-size: 1em; margin-left: 0; margin-top: 19px; padding: 0;}
 
-  .menyn{margin-right: 0px;}
+  .meny{margin-right: 0px;}
 
 
 }
