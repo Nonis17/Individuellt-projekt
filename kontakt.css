@@ -151,7 +151,7 @@ fieldset
 }
 
 /*Gör att input-rutorna är mjuka i kanterna*/
-fieldset input[type="text"], input[type="phone"], input[type="email"]
+fieldset input[type="text"], input[type="tel"], input[type="email"]
 {
 padding: 7px 30px 7px 2px;
 border-radius: 4px;
