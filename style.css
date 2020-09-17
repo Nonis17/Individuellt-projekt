@@ -19,107 +19,137 @@ body {
     flex-direction: column;
   }
 
-.parent-flex > * 
-{
-    padding: 20px;
-}
 
-.child1 /*Conteinern för headern*/
+/*.child1
 {
+  display: flex; 
+  flex-direction: row; 
   position: sticky;
   top: 0;
     height: 100px;
     background: black;  
     order: 1; 
-}
- 
+}*/
+
 
 .headerTitle
 {
   color: white;
-  text-shadow: 2px 2px 4px orange;
   padding: 10px;
-  margin-left: 40px;
-    text-align: left; 
-    letter-spacing: 2px;
-    display: inline-block;
+  margin-left: auto;
+  letter-spacing: 2px;
+  text-align: center; 
+ }
+ 
+
+ /*Här börjar all kod för animerade menyn*/
+ nav{
+
+  height: 12vh;
+  background: black; 
+ 
 }
 
-/* Här börjar menyn: Style The Dropdown Button */
-.meny
+
+.nav-links
 {
-float: right; 
-margin-right: 40px;
+  display: flex;
+  list-style: none;
+  width: 100%;
+  height: 50%;
+  justify-content: space-around; 
+  align-items: center;
+  margin-left: auto;
+ 
 }
 
-
-.hamburger {
-    background-color: black;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 20px;
-  }
-
-
-
-/*CSS animation*/
-@keyframes hamburgerMeny {
-  from {background-color: white;}
-  to {background-color: orange;}
-}
-
-  .line 
+.nav-links li a 
 {
-    width: 25px; 
-    height: 1.5px; 
-    background: white;
-    box-shadow: 1px 1px 3px orange;
-    margin: 5px;
-    animation-name: hamburgerMeny;
-  animation-duration: 7s;
-  animation-iteration-count: 3;
+  color:white;
+  text-decoration: none; 
+  font-size: 16px;
 }
-  
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
-    position: relative;
-    display: inline-block;
+
+.nav-links a:focus
+{
+  padding: 10px;
+border: 2px solid white;
+}
+
+
+@media screen and (max-width: 768px)
+{
+  .line {
+      width: 30px;
+      height: 3px;
+      margin: 5px;
+      background: white;
   }
 
-  
-  /* Dropdown Content (Gömd genom display none) */
-  .dropdown-content {
-    text-align: left; 
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 100px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+  nav {
+      position: relative;
   }
-  
-  /* länkar inne i menyn */
-  .dropdown-content a {
-    color: black;
-    padding: 12px 12px;
-    text-decoration: none;
-    display: block;
+
+  .hamburger {
+      position: absolute; 
+      cursor: pointer; 
+      right: 5%; 
+      top: 50%; 
+      transform: translate(-5%, -50%);
+      z-index: 2;
+      background-color: black;
+      border: none;
   }
-  
-  /* Ändrar färg på menylänkarna när man hovrar över dem */
-  .dropdown-content a:hover {background-color: #bebdbd8e;}
-  
-  /* Visa menyn när man hovrar över meny */
-  .dropdown:hover .dropdown-content {
-    display: block;
+
+  .hamburger:focus
+{
+  background-color: black;
+  border: 1px solid white; 
+color: white;
+}
+
+
+  .nav-links{
+      position: fixed;
+      background: black;
+      height: 100vh;
+      width: 100%;
+      flex-direction: column;
+      clip-path: circle(80px at 90% -10%);   
+      transition: all 1s ease-out; 
+      pointer-events: none;
+
   }
-  
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {
-    background-color: #bebdbd;
+  .nav-links.open {
+      clip-path: circle(1000px at 90% -10%); 
+      pointer-events: all; 
+
   }
+
+  .nav-links li {
+      opacity: 0;
+  }
+
+  .nav-links li a {
+      font-size: 20px;
+  }
+
+  .nav-links li:nth-child(1){
+      transition: all 0.5s ease 0.3s; 
+  }
+  .nav-links li:nth-child(2){
+      transition: all 0.5s ease 0.6s; 
+  }
+  .nav-links li:nth-child(3){
+      transition: all 0.5s ease 0.9s; 
+  }
+  li.fade{
+      opacity: 1;
+  }
+}
+
+
+
 
   /*Sektionen med bild*/
 .bigPicture

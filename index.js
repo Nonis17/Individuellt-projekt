@@ -12,6 +12,18 @@ var nameInput = document.querySelector('.name');
 var emailContact = document.querySelector('#contactEmail');
 var emailPren = document.querySelector('#prenumerationEmail');
 
+/*Den animerade menyn*/
+const hamburger = document.querySelector('.hamburger'); 
+const navLinks = document.querySelector('.nav-links'); 
+const links = document.querySelectorAll('.nav-links li'); 
+
+hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+    links.forEach(link => {
+        link.classList.toggle("fade"); 
+    });
+})
+
 
 /*Funktion: JavaScript som får en popup ruta att dyka upp och försvinna när man trycker på prenumereraknappen*/
 pButton.addEventListener('click', function() {

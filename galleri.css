@@ -37,7 +37,7 @@ body {
 .headerTitle
 {
   color: white;
-  text-shadow: 2px 2px 4px orange;
+
   padding: 10px;
   margin-left: 40px;
     text-align: left; 
@@ -49,25 +49,20 @@ body {
 .meny
 {
 float: right; 
-margin-right: 40px;
-
-}
+margin-right: 50px;
+margin-top: 20px;}
 
 .hamburger {
-    background-color: black;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
     cursor: pointer;
-    border-radius: 20px;
-  }
+    
+   }
 
   .line 
 {
     width: 25px; 
     height: 1.5px; 
     background: white;
-    box-shadow: 1px 1px 3px orange;
+  
     margin: 5px;
 }
   
@@ -330,8 +325,11 @@ form input:focus
 
 @media only screen and (max-width: 600px) {
 
-.headerTitle{font-size: 1em;}
+.headerTitle{font-size: 1em; margin-left: 10px}
 
+.meny{
+  margin-top: 10px;
+}
 
 /*Djurbilderna*/
   .pictures img

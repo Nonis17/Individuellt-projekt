@@ -38,7 +38,6 @@ body {
 .headerTitle
 {
   color: rgb(199, 194, 194);
-  text-shadow: 2px 2px 4px orange;
   padding: 10px;
   margin-left: 40px;
     text-align: left; 
@@ -56,7 +55,6 @@ margin-right: 40px;
 
 /*Strecken som är menyn i headern */
 .hamburgare {
-    background-color: black;
      padding: 16px;
     font-size: 16px;
     border: none;
@@ -69,7 +67,7 @@ margin-right: 40px;
   width: 25px; 
   height: 1.5px; 
     background: white;
-    box-shadow: 1px 1px 3px orange;
+
     margin: 5px;
 
 }
