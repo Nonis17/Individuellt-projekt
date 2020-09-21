@@ -145,7 +145,7 @@ fieldset
   background-color:rgb(199, 194, 194); 
   margin-top: 10px;
   margin-bottom: 30px;
-  box-shadow: 3px 3px rgba(15, 14, 14, 0.589);  
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /*Gör att input-rutorna är mjuka i kanterna*/
@@ -153,7 +153,10 @@ fieldset input[type="text"], input[type="tel"], input[type="email"]
 {
 padding: 7px 30px 7px 2px;
 border-radius: 4px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+#bio{box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
 
 form input[type="text"]
 {
@@ -204,8 +207,10 @@ animation-iteration-count: infinite;
 animation-timing-function: ease-in-out;
 }
 
-/*Funkar ej */ 
-form input#email:valid:not(:placeholder-shown){border: 2px solid rgb(33, 141, 33);}
+/*Om man fyller i korrekt uppgifter i formuläret blir rutorna gröna*/
+form input#name:valid:not(:placeholder-shown){border: 2px solid rgb(33, 141, 33);}
+form input#contactEmail:valid:not(:placeholder-shown){border: 2px solid rgb(33, 141, 33);}
+form input#phone:valid:not(:placeholder-shown){border: 2px solid rgb(33, 141, 33);}
 
 /*Obligatoriska fält-texten*/
 #required
@@ -221,8 +226,6 @@ form input#email:valid:not(:placeholder-shown){border: 2px solid rgb(33, 141, 33
   margin-top: 20px;
   border-radius: 4px;
 }
-
-
 
 .sendButton
 {
@@ -373,6 +376,7 @@ text-decoration: underline;
   border-radius: 20px;
 }
 
+
 .popUpButton /*Knappen på popupen*/
 {
   margin: 20px; 
@@ -431,6 +435,12 @@ text-decoration: underline;
   font-size: 8px;
   cursor: pointer;
 }
+.x-close:focus{
+  font-size: 14px;
+  padding: 5px;
+  border: 1px solid black;
+}
+
 
 
 @media only screen and (max-width: 600px) {
