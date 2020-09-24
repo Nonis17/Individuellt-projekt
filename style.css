@@ -67,6 +67,7 @@ border: 2px solid white;
       height: 3px;
       margin: 5px;
       background: white;
+      display: block;
   }
 
   nav {
@@ -87,7 +88,7 @@ border: 2px solid white;
 .hamburger:focus
 {
   background-color: black;
-  border: 1px solid white; 
+  border: 2px solid white; 
 color: white;
 }
 
@@ -105,6 +106,10 @@ color: white;
 .nav-links.open {
       clip-path: circle(1000px at 90% -10%); 
       pointer-events: all; 
+  }
+
+  .nav-links a:hover{
+    color: orange;
   }
 
   .nav-links li {
@@ -173,6 +178,18 @@ margin-bottom: 50px;
   padding: 10px;
   font-size: 16px;
   color: white;
+}
+
+.textInfo a:link{
+  color: blue;
+}
+
+.textInfo a:visited{
+  color: lightgrey;
+}
+
+.textInfo a:hover{
+  color: orange;
 }
 
 .textInfo
@@ -300,6 +317,11 @@ margin-bottom: 10px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+
+input:focus:invalid{
+  border: 2px solid red; 
+}
+
 form input:focus
   {
     border: 3px solid black; 
@@ -375,6 +397,9 @@ form label
   visibility: visible; 
   opacity: 1;
 }
+
+
+
 
 .x-close {
   position: absolute;

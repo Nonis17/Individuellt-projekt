@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script defer src="index.js"></script>
+    <script src="startsidan.js" defer></script>
     <title>Klättring för alla!</title>
     <meta name="description" content="Allt du behöver för att komma igång med klättring. Bli inspirerad eller utveckla din klättring ännu mer"/>
 
@@ -15,30 +16,25 @@
 <!--Parent-flex är huvudconteinern för alla flexboxbarn-->    
 <div class="parent-flex">
 
-    <!--First item-->
-  
-    <header class="child1">
-        <nav>
+<!--First item-->
+<header class="child1">
+    <nav>
               
-                <h1 class="headerTitle">Klättring</h1>
+            <h1 class="headerTitle">Klättring</h1>
           
-                <div class="hamburger">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div>
+            <button class="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                </button>
            
         <ul class="nav-links">
             <li><a href="index.html">Hem</a></li>
             <li><a href="galleri.html">Galleri</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-
-   
-  
+        </ul> 
     </nav>
-
-    </header>
+</header>
       
 
 
@@ -88,10 +84,10 @@
         <input type="text" class="inputForm" id="prenumerationName" placeholder="namn" required minlength="2"><br>
 
         <label for="prenumerationEmail">E-postadress: </label>
-        <input type="email" class="inputForm" id="prenumerationEmail" placeholder="e-post" required><br>
+        <input type="email" class="inputForm" id="prenumerationEmail" placeholder="e-post" required minlength="4"><br>
     </form>
         <button type="submit" class="popUpButton">Prenumerera</button>
-        <span class="thankYou">Tack!</span>
+        <span class="thankYou"></span>
 <button class="x-close">X</button>
     </div>  </div>
 
