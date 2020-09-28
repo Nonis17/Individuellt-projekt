@@ -11,6 +11,7 @@ var textBio = document.querySelector('.bio');
 var nameInput = document.querySelector('#prenumerationName');
 var emailContact = document.querySelector('#contactEmail');
 var emailPren = document.querySelector('#prenumerationEmail');
+var contactName = document.querySelector('#name');
 
 
 /*Funktion: JavaScript som får en popup ruta att dyka upp och försvinna*/
@@ -123,11 +124,12 @@ popUpButton.addEventListener('click', function prenButton() {
 sendButton.addEventListener('click', function() {
     reply.classList.add('reply-active');
 
-    if (textBio.value.length > 0 && emailContact.value.length > 0 && nameInput.value.length > 1) {
+    if (textBio.value.length > 0 && emailContact.value.length > 0 && contactName.value.length > 1) {
         reply.style.color = "black";
         reply.textContent = "Tack! Vi svarar så fort vi kan"; 
     }
      else{
+      
         reply.style.color = "#9f0000";
         reply.textContent = "Fyll i de tomma fältet"; 
     }
