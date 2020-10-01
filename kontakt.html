@@ -21,7 +21,7 @@
         
            <div class="meny">
            <div class="dropdown">
-            <button class="hamburger">
+            <button class="hamburger" aria-label="menu">
                 <span class="line"></span>
                 <span class="line"></span>
                 <span class="line"></span>
@@ -51,51 +51,47 @@
                 <form> <!-- "Form är containern för alla input-rutor-->
                     <label for="name">Namn *</label>
                     <br>
-                    <input type="text" id="name" placeholder="namn" required minlength="2">
+                    <input type="text" aria-labelledby="name" id="name" placeholder="namn" required minlength="2">
                     <br><br>
                     <label for="contactEmail">E-post *</label><br>
-                    <input type="email" class="email" id="contactEmail" placeholder="e-post" required>
+                    <input type="email" aria-labelledby="contactEmail" class="email" id="contactEmail" placeholder="e-post" required>
                     <br><br>
                     <label for="phone">Mobilnummer</label><br>
-                    <input type="tel" id="phone" name="telefon" placeholder="070"  pattern="[0-9]{10}" minlength="10">
+                    <input type="tel" aria-labelledby="phone" id="phone" name="telefon" placeholder="070"  pattern="[0-9]{10}" minlength="10">
                                              
                 <p id="required">*obligatoriska fält</p>
               
         <!-- en större boxruta att skriva text i-->
         <label for="bio"></label>
-        <textarea name="bio" class="bio" id="bio" maxlength="140" cols="30" rows="18" placeholder="Skriv..." required></textarea>      
+        <textarea name="bio" aria-labelledby="bio" class="bio" id="bio" maxlength="140" cols="30" rows="18" placeholder="Skriv..." required></textarea>      
         <br>
                 <span class="reply"></span><br>
                 <br>
-                <button type="submit" class="sendButton" aria-label="Skicka">Skicka</button>
+                <button type="submit" class="sendButton" aria-label="Send">Skicka</button>
                           
-            </form> </fieldset> 
+    </form> </fieldset> 
         </div>
         </div>
         </main> 
 
-
-
    <!--fourth child item i conteinern-->
    <footer class="child4">
-    <button class="button">Prenumerera på mitt nyhetsbrev!</button>
+    <button class="button" aria-label="subscription window">Prenumerera på mitt nyhetsbrev!</button>
 
         <div class="button-bg">
             <div class="popup">
             <h2>Prenumerera för att hänga med i svängarna!</h2>
 <form>
-        <label for="namePopUp">Namn:</label>
-       
-        <input type="text" class="name" id="prenumerationName" placeholder="namn" required minlength="2">
+        <label for="prenumerationName">Namn:</label>
+        <input type="text" aria-labelledby="prenumerationName" class="name" id="prenumerationName" placeholder="namn" required minlength="2">
         <br>
         <label for="prenumerationEmail">E-postadress: </label>
-       
-        <input type="email" class="email" id="prenumerationEmail" placeholder="e-post" required><br>
+        <input type="email" aria-labelledby="prenumerationEmail" class="email" id="prenumerationEmail" placeholder="e-post" required><br>
 </form>
        
-        <button type="submit" class="popUpButton">Prenumerera</button>
+        <button type="submit" class="popUpButton" aria-label="subscribe">Prenumerera</button>
         <span class="thankYou"></span>
-<button class="x-close">X</button>
+<button class="x-close" aria-label="Close window">X</button>
     </div>  </div>
 
 

@@ -20,7 +20,7 @@
     
        <div class="meny">
        <div class="dropdown">
-        <button class="hamburger">
+        <button class="hamburger" aria-label="Menu">
             <span class="line"></span>
             <span class="line"></span>
             <span class="line"></span>
@@ -80,7 +80,7 @@
 
 <!--Last child item-->
     <footer class="footer">
-    <button class="button">Prenumerera på mitt nyhetsbrev!</button>
+    <button class="button" aria-label="Subscription">Prenumerera på mitt nyhetsbrev!</button>
 
         <div class="button-bg">
             <div class="popup">
@@ -88,21 +88,17 @@
         
         <form>
         <label for="prenumerationName">Namn:</label><br>
-        <input type="text" class="name" id="prenumerationName" placeholder="namn" required><br>
+        <input type="text" aria-labelledby="prenumerationName" class="name" id="prenumerationName" placeholder="namn" required><br>
 
         <label for="prenumerationEmail">E-postadress: </label><br>
-        <input type="email" class="email" id="prenumerationEmail" placeholder="e-post" required><br>
+        <input type="email" aria-labelledby="prenumerationEmail" class="email" id="prenumerationEmail" placeholder="e-post" required><br>
     </form>
-        <button type="submit" class="popUpButton">Prenumerera</button>
+        <button type="submit" class="popUpButton" aria-label="Subscribe">Prenumerera</button>
         <span class="thankYou">Tack!</span>
-<button class="x-close">X</button>
+<button class="x-close" aria-label="Close">X</button>
     </div>  </div>
 
-
         <p class="footerText">Copyright 2020</p>
-       
     </footer>
-   
-
-</body>
+   </body>
 </html>

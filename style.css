@@ -90,8 +90,8 @@ border: 2px solid white;
   background-color: black;
   border: 2px solid white; 
 color: white;
+outline: none;
 }
-
 
 .nav-links{
       position: fixed;
@@ -134,8 +134,7 @@ color: white;
   }
 }
 
-
-  /*Sektionen med bild*/
+/*Sektionen med bild*/
 .bigPicture
 {
 margin: 0;
@@ -153,7 +152,6 @@ margin-bottom: 50px;
   bottom: 0px;
   left: 0px;
    z-index: -1;
- 
 }
 
 /*Tredje conteinern: Textdelen*/
@@ -163,7 +161,6 @@ margin-bottom: 50px;
     background-color: black; 
     order: 3;
 }
-
 
 .textSection
 {
@@ -203,10 +200,7 @@ margin-bottom: 50px;
   text-align: left;
   padding: 30px;
   line-height: 24px;
-
 }
-
-
 
 .textInfo h2
 {
@@ -217,13 +211,10 @@ margin-bottom: 50px;
 /*Footer-sektionen*/
 .footer
 {
- 
   padding: 20px;
     height: 130px;
     background-color: rgb(156, 90, 13);  
-    
-  
-   }
+}
 
 footer 
 {
@@ -243,7 +234,6 @@ footer
     visibility: visible; 
     opacity: 1;
 }
-
 
 /* Här börjar CSS för javascriptet "prenumerera på vårt nyhetsbrev!" */ 
 
@@ -319,14 +309,15 @@ margin-bottom: 10px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-
 input:focus:invalid{
   border: 2px solid red; 
 }
 
-form input:focus
+/*När man klickat eller tab:at på form input*/
+form input[type="text"]:focus, input[type="email"]:focus
   {
-    border: 3px solid black; 
+    border: 3px solid black;
+    outline: none; 
   }
 
 form label
@@ -334,8 +325,6 @@ form label
   display: block;
   color: black;
 }
-
-
 
 .popup /*Själva popup-rutan*/
 {

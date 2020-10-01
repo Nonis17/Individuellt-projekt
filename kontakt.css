@@ -164,9 +164,11 @@ form input[type="text"]
   border-radius: 4px;
   margin-bottom: 15px;
 }
-form input:focus
+
+form input[type="text"]:focus, input[type="email"]:focus
   {
-    border: 3px solid black; 
+    border: 3px solid black;
+    outline: none; 
   }
 
 form label
@@ -180,11 +182,13 @@ form label
 fieldset input:focus
   {
     border: 3px solid black; 
+    outline: none;
   }
 
 .bio:focus
   {
     border: 3px solid black; 
+    outline: none;
   }
 
 /*CSS animation*/
@@ -196,7 +200,6 @@ fieldset input:focus
 /*Fyll i formuläret, så kommer vi att höra av oss!*/
 legend
 {
-
 font-size: 20px;
 margin-bottom: 40px;
 padding: 10px;
@@ -212,13 +215,20 @@ form input#name:valid:not(:placeholder-shown){border: 2px solid rgb(33, 141, 33)
 form input#contactEmail:valid:not(:placeholder-shown){border: 2px solid rgb(33, 141, 33);}
 form input#phone:valid:not(:placeholder-shown){border: 2px solid rgb(33, 141, 33);}
 
-input:invalid {
+/*Vet ej om jag ska ha denna kvar
+form input:invalid {
   box-shadow: 0 0 5px 1px red;
 }
 
-input:focus:invalid {
+form input:focus:invalid {
   box-shadow: none;
-}
+}*/
+
+form input[type="text"]:focus, input[type="email"]:focus
+  {
+    border: 3px solid black;
+    outline: none; 
+  }
 
 /*Obligatoriska fält-texten*/
 #required
@@ -420,13 +430,11 @@ text-decoration: underline;
           font-size: 16px;
         }
 
-
 .thankYou
 {
   opacity: 0;
   transition: visibility 0s, opacity 0.5s; 
   display: block;
-  
 }
 
 .thankYou-active
@@ -447,6 +455,7 @@ text-decoration: underline;
   font-size: 14px;
   padding: 5px;
   border: 1px solid black;
+  outline: none;
 }
 
 

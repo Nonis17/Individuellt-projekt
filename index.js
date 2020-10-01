@@ -23,8 +23,7 @@ xButton.addEventListener('click', function() {
     buttonBg.classList.remove('bg-active');
 });
 
-/*Här försöker jag göra ny kod till formulärsvalideringen*/
-
+/*kod till formulärsvalideringen*/
 
 const form  = document.getElementsByTagName('form')[0];
 
@@ -32,8 +31,7 @@ const email = document.getElementById('prenumerationEmail');
 const emailError = document.querySelector('#prenumerationEmail + span.thankYou');
 
 email.addEventListener('input', function (event) {  
-  // Each time the user types something, we check if the
-  // form fields are valid.
+  // Each time the user types something, we check if the form fields are valid.
   nameInput.style.borderColor = "white";
         emailPren.style.borderColor = "white";
 
@@ -44,8 +42,7 @@ email.addEventListener('input', function (event) {
     thankYou.textContent = "Tack!";*/
     emailPren.style.borderColor = "white";
     prenButton();
-    // In case there is an error message visible, if the field
-    // is valid, we remove the error message.
+    // In case there is an error message visible, if the field is valid, we remove the error message.
 
   } else {
     // If there is still an error, show the correct error
@@ -66,8 +63,7 @@ form.addEventListener('submit', function (event) {
 
 function showError() {
   if(email.validity.valueMissing) {
-    // If the field is empty
-    // display the following error message.
+    // If the field is empty display the following error message.
     emailPren.style.borderColor = "red";
     thankYou.style.color = "red";
     thankYou.textContent = 'Du behöver skriva en e-postadress!';
@@ -120,11 +116,35 @@ popUpButton.addEventListener('click', function prenButton() {
   
 });
 
+//Funktion för kontaktformuläret som validerar e-mailen: 
+function showErrorEmail() {
+  if(emailContact.validity.valueMissing) {
+    
+    // If the field is empty display the following error message.
+    emailContact.style.borderColor = "red";
+    reply.style.color = "red";
+    reply.textContent = 'Du behöver skriva en e-postadress!';
+  
+  } else if(emailContact.validity.typeMismatch) {
+  
+    // If the field doesn't contain an email address display the following error message.
+    reply.style.color = "red";
+    reply.textContent = 'Det måste vara en e-postadress';
+  } 
+}
+
+
 /*Funktion: När man trycker på skicka-knappen i kontakt-formuläret får man ett meddelande*/
-sendButton.addEventListener('click', function() {
+sendButton.addEventListener('click', function(event) {
     reply.classList.add('reply-active');
 
-    if (textBio.value.length > 0 && emailContact.value.length > 0 && contactName.value.length > 1) {
+    if(!emailContact.validity.valid) {
+      showErrorEmail();
+      event.preventDefault();
+      return;
+    }
+
+    if (textBio.value.length > 0 && emailContact.validity.valid && contactName.value.length > 1) {
         reply.style.color = "black";
         reply.textContent = "Tack! Vi svarar så fort vi kan"; 
     }

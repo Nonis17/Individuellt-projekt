@@ -30,14 +30,12 @@ body {
   top: 0;
     height: 100px;
     background: black;  
-    order: 1;
-    
+    order: 1;  
 }
 
 .headerTitle
 {
   color: white;
-
   padding: 10px;
   margin-left: 40px;
     text-align: left; 
@@ -168,8 +166,6 @@ order: 3;
   color: white; 
 }
 
-
-
 /* Här börjar CSS för javascriptet "prenumerera på vårt nyhetsbrev!" */ 
 
 .button /*Prenumerera-knappen*/
@@ -236,9 +232,10 @@ form input[type="text"], input[type="email"] {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-form input:focus
+form input[type="text"]:focus, input[type="email"]:focus
   {
-    border: 3px solid black; 
+    border: 3px solid black;
+    outline: none; 
   }
 
 .bg-active /*popup-rutan blir synlig*/
@@ -301,9 +298,7 @@ form input:focus
         cursor: pointer; 
         border-radius: 36px;
         text-decoration:underline;
-        }
-
-       
+        } 
 
 .thankYou
 {
@@ -330,6 +325,7 @@ form input:focus
   font-size: 14px;
   padding: 5px;
   border: 1px solid black;
+  outline: none;
 }
 
 

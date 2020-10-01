@@ -22,7 +22,7 @@
               
             <h1 class="headerTitle">Klättring</h1>
           
-            <button class="hamburger">
+            <button class="hamburger" aria-label="menu">
                 <span class="line"></span>
                 <span class="line"></span>
                 <span class="line"></span>
@@ -36,8 +36,6 @@
     </nav>
 </header>
       
-
-
     <!--Second item-->
     <div class="bigPicture">
         <img src="https://snowbrains.com/wp-content/uploads/2016/10/http-coresites-cdn.factorymedia.com-mpora_new-wp-content-uploads-2015-12-iStock_000052710440_Medium.jpg" alt="climber">
@@ -74,21 +72,21 @@
 
      <!--Last item av 'parent-flex'-->
     <footer class="footer">
-    <button class="button">Prenumerera på mitt nyhetsbrev!</button>
+    <button class="button" aria-label="subscription window">Prenumerera på mitt nyhetsbrev!</button>
 
         <div class="button-bg">
             <div class="popup">
                 <h2>Prenumerera för att hänga med i svängarna!</h2>
         <form>
         <label for="prenumerationName">Namn: </label>
-        <input type="text" class="inputForm" id="prenumerationName" placeholder="namn" required minlength="2"><br>
+        <input type="text" aria-labelledby="prenumerationName" class="inputForm" id="prenumerationName" placeholder="namn" required minlength="2"><br>
 
         <label for="prenumerationEmail">E-postadress: </label>
-        <input type="email" class="inputForm" id="prenumerationEmail" placeholder="e-post" required minlength="4"><br>
+        <input type="email" aria-labelledby="prenumerationEmail" class="inputForm" id="prenumerationEmail" placeholder="e-post" required minlength="4"><br>
     </form>
-        <button type="submit" class="popUpButton">Prenumerera</button>
+        <button type="submit" aria-label="subscribe" class="popUpButton">Prenumerera</button>
         <span class="thankYou"></span>
-<button class="x-close">X</button>
+<button class="x-close" aria-label="close window">X</button>
     </div>  </div>
 
 
