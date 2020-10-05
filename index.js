@@ -1,5 +1,5 @@
 
-/*Deklarerar variabler i JS kopplat till html*/
+/*Deklarerar variabler i JS kopplat till html/css*/
 var pButton = document.querySelector('.button'); 
 var buttonBg = document.querySelector('.button-bg');
 var xButton = document.querySelector('.x-close'); 
@@ -24,117 +24,66 @@ xButton.addEventListener('click', function() {
 });
 
 /*kod till formulärsvalideringen*/
-
-const form  = document.getElementsByTagName('form')[0];
-
 const email = document.getElementById('prenumerationEmail');
-const emailError = document.querySelector('#prenumerationEmail + span.thankYou');
 
+//Funktion för validering av prenumerationsemail
 email.addEventListener('input', function (event) {  
-  // Each time the user types something, we check if the form fields are valid.
-  nameInput.style.borderColor = "white";
-        emailPren.style.borderColor = "white";
-
-  if (email.validity.valid) {
-    
-    /*thankYou.classList.add('thankYou-active'); 
-    thankYou.style.color = "black";
-    thankYou.textContent = "Tack!";*/
-    emailPren.style.borderColor = "white";
-    prenButton();
-    // In case there is an error message visible, if the field is valid, we remove the error message.
-
-  } else {
-    // If there is still an error, show the correct error
+   if (!email.validity.valid) {
     showError();
-  }
-});
-
-form.addEventListener('submit', function (event) {
-  // if the email field is valid, we let the form submit
-
-  if(!email.validity.valid) {
-    // If it isn't, we display an appropriate error message
-    showError();
-    // Then we prevent the form from being sent by canceling the event
     event.preventDefault();
-  }
+  } 
 });
+
 
 function showError() {
   if(email.validity.valueMissing) {
-    // If the field is empty display the following error message.
-    emailPren.style.borderColor = "red";
-    thankYou.style.color = "red";
-    thankYou.textContent = 'Du behöver skriva en e-postadress!';
-    nameInput.style.borderColor = "white";
+    document.querySelector(".thankYou").classList.add("invalidMessage");
+    document.getElementById("prenumerationEmail").classList.add("invalidForm");
+    thankYou.textContent = 'Du behöver skriva en e-postadress! :)';
+ 
   } else if(email.validity.typeMismatch) {
-    // If the field doesn't contain an email address
-    // display the following error message.
-    thankYou.textContent = 'Det måste vara en e-postadress';
+    document.querySelector(".thankYou").classList.add("invalidMessage");
+    document.getElementById("prenumerationEmail").classList.add("invalidForm");
+    thankYou.textContent = 'Ogiltig e-postadress';
   } 
-
-  // Set the styling appropriately
- thankYou.className = '.thankYou-active';
 }
 
-
-
-/*Funktion: Tack-texten dyker upp när man fyllt i epostadressen i prenumerationen*/
+/*Funktion: validering i prenumerations pop upen*/
 popUpButton.addEventListener('click', function prenButton() {
-    thankYou.classList.add('thankYou-active');
+thankYou.classList.add('thankYou-active');
   
-      if (nameInput.value.length > 1 && emailPren.value.length > 0) {
-        thankYou.style.color = "black";
-        thankYou.textContent = "Tack!"; 
-        nameInput.style.borderColor = "white";
-        emailPren.style.borderColor = "white";
-        
+      if (nameInput.value.length > 1 && emailPren.validity.valid) {
+      document.querySelector(".thankYou").classList.remove("invalidMessage");
+      document.getElementById("prenumerationEmail").classList.remove("invalidForm");
+      document.getElementById("prenumerationName").classList.remove("invalidForm");  
+      thankYou.textContent = "Tackar!"; 
+             
     }
     if (nameInput.value.length > 1 && emailPren.value.length < 1) {
-        thankYou.style.color = "red";
-        thankYou.textContent = "Fyll i e-postadressen"; 
-        emailPren.style.borderColor = "red";
-        nameInput.style.borderColor = "white";
-        showError();
-        
+      console.log("Hoj boj !");
+       document.getElementById("prenumerationName").classList.remove("invalidForm"); 
+        showError();    
     }
 
+ //If email and name is left blank, this error message pops up
     else if (nameInput.value.length < 1 && emailPren.value.length < 1) {
-        thankYou.style.color = "red";
-        thankYou.textContent = "Fyll i namn och e-postadress"; 
-        nameInput.style.borderColor = "red";
-        emailPren.style.borderColor = "red";
+      document.querySelector(".thankYou").classList.add("invalidMessage");
+      document.getElementById("prenumerationEmail").classList.add("invalidForm");
+      document.getElementById("prenumerationName").classList.add("invalidForm");    
+      thankYou.textContent = "Fyll i namn och e-postadress"; 
     }
-
+ 
+    //If the name is invalid, this error message pops up
     else if (nameInput.value.length < 2) {
-        thankYou.style.color = "red";
-        thankYou.textContent = "Fyll i namn"; 
-        nameInput.style.borderColor = "red";
-    
+      document.querySelector(".thankYou").classList.add("invalidMessage");
+      document.getElementById("prenumerationName").classList.add("invalidForm"); 
+      document.getElementById("prenumerationEmail").classList.remove("invalidForm"); 
+      thankYou.textContent = "Fyll i namn";  
     }
-  
 });
 
-//Funktion för kontaktformuläret som validerar e-mailen: 
-function showErrorEmail() {
-  if(emailContact.validity.valueMissing) {
-    
-    // If the field is empty display the following error message.
-    emailContact.style.borderColor = "red";
-    reply.style.color = "red";
-    reply.textContent = 'Du behöver skriva en e-postadress!';
-  
-  } else if(emailContact.validity.typeMismatch) {
-  
-    // If the field doesn't contain an email address display the following error message.
-    reply.style.color = "red";
-    reply.textContent = 'Det måste vara en e-postadress';
-  } 
-}
 
-
-/*Funktion: När man trycker på skicka-knappen i kontakt-formuläret får man ett meddelande*/
+/* När man trycker på skicka-knappen i kontakt-formuläret */
 sendButton.addEventListener('click', function(event) {
     reply.classList.add('reply-active');
 
@@ -149,9 +98,25 @@ sendButton.addEventListener('click', function(event) {
         reply.textContent = "Tack! Vi svarar så fort vi kan"; 
     }
      else{
-      
         reply.style.color = "#9f0000";
         reply.textContent = "Fyll i de tomma fältet"; 
     }
 });
 
+//Funktion för kontaktformuläret som validerar e-mailen: 
+function showErrorEmail() {
+  if(emailContact.validity.valueMissing) {
+   
+    // If the field is empty display the following error message.
+    document.querySelector(".reply").classList.add("invalidMessage");
+    document.getElementById("contactEmail").classList.add("invalidForm"); 
+    reply.textContent = 'Du behöver skriva in en e-postadress!';
+    
+  
+  } else if(emailContact.validity.typeMismatch) {
+    document.querySelector(".reply").classList.add("invalidMessage");
+    document.getElementById("contactEmail").classList.add("invalidForm"); 
+    // If the field doesn't contain an email address display the following error message.
+    reply.textContent = 'Ogiltig e-postadress!';
+  } 
+}

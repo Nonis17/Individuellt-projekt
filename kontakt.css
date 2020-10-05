@@ -458,6 +458,15 @@ text-decoration: underline;
   outline: none;
 }
 
+/* Till JavaScripts valideringen*/
+
+.invalidMessage{
+  color: red; 
+}
+.invalidForm{
+  border: 1px solid red;
+  color: red; 
+}
 
 
 @media only screen and (max-width: 600px) {
