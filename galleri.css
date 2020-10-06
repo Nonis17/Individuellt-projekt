@@ -102,13 +102,13 @@ margin-top: 20px;}
     display: block;
   }
   
-  /* Change the background color of the dropdown button when the dropdown content is shown */
+  /* Ändrar bakgrunden på drop down menyn */
   .dropdown:hover .dropbtn {
     background-color: #bebdbd;
   }
 
 
-/*Tredje barnet i flex-conteinern: bilddelen som ligger i en grid*/
+/*bilddelen som ligger i en grid*/
 .child3
 {
 background-color: #f1f1f1; 
@@ -355,7 +355,7 @@ form input[type="text"]:focus, input[type="email"]:focus
 {
   min-height: 150px;
 }
-
+}
 
 
 /* Till JavaScripts valideringen*/
@@ -367,3 +367,5 @@ form input[type="text"]:focus, input[type="email"]:focus
   border: 1px solid red;
   color: red; 
 }
+
+

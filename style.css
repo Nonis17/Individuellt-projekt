@@ -58,6 +58,7 @@ body {
 {
   padding: 10px;
 border: 2px solid white;
+outline: none;
 }
 
 @media screen and (min-width: 769px)
@@ -178,18 +179,10 @@ margin-bottom: 50px;
 /*Länkarna*/
 .textInfo a:focus
 {
-  border: 1px solid white; 
   padding: 10px;
   font-size: 16px;
   color: white;
-}
-
-.textInfo a:link{
-  color: blue;
-}
-
-.textInfo a:visited{
-  color: lightgrey;
+  outline: none;
 }
 
 .textInfo a:hover{
@@ -416,6 +409,8 @@ form label
   border: 1px solid red;
   color: red; 
 }
+
+/*Media queries för olika skärmstorlekar */
 
 @media only screen and (max-width: 1024px) {
   .meny

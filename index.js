@@ -32,6 +32,10 @@ email.addEventListener('input', function (event) {
     showError();
     event.preventDefault();
   } 
+  else if(email.validity.valid){
+    thankYou.classList.remove('thankYou-active');
+    document.getElementById("prenumerationEmail").classList.remove("invalidForm");
+  }
 });
 
 
@@ -46,6 +50,7 @@ function showError() {
     document.getElementById("prenumerationEmail").classList.add("invalidForm");
     thankYou.textContent = 'Ogiltig e-postadress';
   } 
+ 
 }
 
 /*Funktion: validering i prenumerations pop upen*/
@@ -60,7 +65,6 @@ thankYou.classList.add('thankYou-active');
              
     }
     if (nameInput.value.length > 1 && emailPren.value.length < 1) {
-      console.log("Hoj boj !");
        document.getElementById("prenumerationName").classList.remove("invalidForm"); 
         showError();    
     }

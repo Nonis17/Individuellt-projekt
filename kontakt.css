@@ -61,6 +61,7 @@ margin-right: 40px;
 
  .hamburger:focus {
    border: 2px solid white; 
+   outline: none;
  }
 
 .line 
@@ -72,7 +73,7 @@ margin-right: 40px;
   display: block;
 }
   
-  /* The container <div> - needed to position the dropdown content */
+  /* The container <div> - för att kunna positionera menyn */
   .dropdown {
     position: relative;
     display: inline-block;
@@ -106,7 +107,7 @@ margin-right: 40px;
     display: block;
   }
   
-  /* Change the background color of the dropdown button when the dropdown content is shown */
+  /* Ändrar bakgrundsfärgen på drop down menyn */
   .dropdown:hover .dropbtn {
     background-color: #bebdbd;
   }
@@ -215,14 +216,6 @@ form input#name:valid:not(:placeholder-shown){border: 2px solid rgb(33, 141, 33)
 form input#contactEmail:valid:not(:placeholder-shown){border: 2px solid rgb(33, 141, 33);}
 form input#phone:valid:not(:placeholder-shown){border: 2px solid rgb(33, 141, 33);}
 
-/*Vet ej om jag ska ha denna kvar
-form input:invalid {
-  box-shadow: 0 0 5px 1px red;
-}
-
-form input:focus:invalid {
-  box-shadow: none;
-}*/
 
 form input[type="text"]:focus, input[type="email"]:focus
   {
