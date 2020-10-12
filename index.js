@@ -124,3 +124,14 @@ function showErrorEmail() {
     reply.textContent = 'Ogiltig e-postadress!';
   } 
 }
+
+
+//Klättergalleriet test ! 
+
+let btns = document.querySelectorAll('.pictures');
+
+for (i of btns) {
+  i.addEventListener('click', function() {
+    console.log(this);
+  });
+}

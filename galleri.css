@@ -1,3 +1,4 @@
+
 *
 {
     box-sizing: border-box;
@@ -8,68 +9,66 @@
 body {
     display: flex;
   flex-direction: column;
-    background-color: black;
     font-family: times new roman; 
 }
 
-.parent-flex /*Detta är conteinern för alla flexboxes*/
-{
-    min-height: 100vh; 
-    display: flex; 
-    flex-direction: column;
-  }
+/* CSS för headern */ 
 
-.parent-flex > * 
-{
-    padding: 20px;
+header {
+    background-image: url(img/night.jpg); 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center; 
+    height: 250px; 
+    position: relative; 
 }
 
-.child1 /*Conteinern för headern*/
-{
-  position: sticky;
-  top: 0;
-    height: 100px;
-    background: black;  
-    order: 1;  
+.header-title{
+    color: white;
+    font-size: 36px;
 }
 
-.headerTitle
-{
-  color: white;
-  padding: 10px;
-  margin-left: 40px;
-    text-align: left; 
-    letter-spacing: 2px;
-    display: inline-block;
-}
+    nav {
+        position: absolute; 
+        top: 0;
+        right: 0; 
+        left: 0;
+        z-index: 2; 
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; 
+        padding: 50px 60px 0px 60px;
+    }
 
-/* Här börjar menyn: Style The Dropdown Button */
+/* ----- Här börjar menyn: vart menyn ska vara i headern ----- */
+
 .meny
 {
 float: right; 
-margin-right: 50px;
-margin-top: 20px;}
+margin-right: 100px;
+}
 
 .hamburger {
-    cursor: pointer;
-    background: black;
-    border: none; 
-   }
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0);
+  border: none; 
+ }
 
-   .hamburger:focus {
-     border: 2px solid white; 
-   }
+ .hamburger:focus {
+   border: 2px solid white; 
+   outline: none;
+ }
 
-  .line 
+.line 
 {
-    width: 25px; 
-    height: 1.5px; 
-    background: white;
-    margin: 5px;
-    display: block;
+  width: 35px; 
+  height: 2.5px; 
+  background: white;
+  margin: 5px;
+  display: block;
 }
   
-  /* The container <div> - needed to position the dropdown content */
+  /* The container <div> - för att kunna positionera menyn */
   .dropdown {
     position: relative;
     display: inline-block;
@@ -102,18 +101,11 @@ margin-top: 20px;}
     display: block;
   }
   
-  /* Ändrar bakgrunden på drop down menyn */
+  /* Ändrar bakgrundsfärgen på drop down menyn */
   .dropdown:hover .dropbtn {
     background-color: #bebdbd;
   }
 
-
-/*bilddelen som ligger i en grid*/
-.child3
-{
-background-color: #f1f1f1; 
-order: 3;
-}
 
 /*Grid conteinern*/
 @supports (display: grid){
@@ -126,8 +118,8 @@ order: 3;
   .gridPictures
     {
         display: grid; 
-        grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-        grid-gap: 0.5rem; 
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 1rem; 
     }
 }
 
@@ -136,18 +128,20 @@ order: 3;
 {
   display: flex;
   flex-flow: column;
-  justify-content: center;
   align-items: center;
-  padding: 1rem;
+  justify-content: space-evenly;  
+  padding: 2rem;
 }
 
 .pictures img
 {
-  max-width: 600px;
-  max-height: 375px;
+  cursor: pointer;
+  max-width: 400px;
+  max-height: 170px;
   border-radius: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 
 /*Footer-sektionen*/
 .footer
@@ -367,5 +361,6 @@ form input[type="text"]:focus, input[type="email"]:focus
   border: 1px solid red;
   color: red; 
 }
+
 
 
