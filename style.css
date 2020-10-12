@@ -1,3 +1,4 @@
+
 *
 {
     box-sizing: border-box;
@@ -8,33 +9,30 @@
 body {
     display: flex;
   flex-direction: column;
-    background-color: black;
+    background-color: white;
     font-family: times new roman; 
 }
 
-.parent-flex /*Detta är conteinern för alla flexboxes*/
-{
-    min-height: 100vh; 
-    display: flex; 
-    flex-direction: column;
-  }
 
-.headerTitle
-{
-  font-size: 40px;
-  color: white;
-  padding: 10px;
-  margin-left: auto;
-  letter-spacing: 2px;
-  text-align: center; 
- }
+  header {
+    background-image: url(img/night.jpg); 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center; 
+    height: 250px; 
+    position: relative; 
+}  
+
+.header-title{
+  color: white; 
+    font-size: 50px;
+    text-align: center;
+    margin-top: 30px;
+    letter-spacing: 4px;
+}
  
 
  /*Här börjar all kod för animerade menyn*/
- nav{
- min-height: 90px;
-  background: black; 
-}
 
 .nav-links
 {
@@ -66,6 +64,20 @@ outline: none;
   .hamburger{
     display: none;
   }
+
+  ul{
+      background-color: black;
+      padding: 20px;
+  }
+
+  .nav-links a:hover{
+    color: orange;
+  }
+
+  .nav-links a:focus{
+    border: 1px solid white;
+    color: orange;
+  }
 }
 
 @media screen and (max-width: 768px)
@@ -89,22 +101,20 @@ outline: none;
       top: 50%; 
       transform: translate(-5%, -50%);
       z-index: 2;
-     background-color: black;
+     background-color: rgba(0, 0, 0, 0);
       border: none;
   }
 
 .hamburger:focus
 {
-  background-color: black;
   border: 2px solid white; 
 color: white;
 outline: none;
 }
 
 .nav-links{
-      position: fixed;
-      background-image: url(img/night.jpg); 
-      /*background: black;*/
+      position: fixed; 
+      background: black;
       height: 100vh;
       width: 100%;
       flex-direction: column;
@@ -143,38 +153,18 @@ outline: none;
   }
 }
 
-/*Sektionen med bild*/
-.bigPicture
-{
-margin: 0;
-padding: 0;
-order: 2;
-margin-bottom: 50px;
-}
-
-.bigPicture img 
-{
-  position: relative;
-  width: 100%;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-   z-index: -1;
-}
-
-/*Tredje: Textdelen*/
-.child3
-{
-  min-height: 300px;
-    background-color: black; 
-    order: 3;
-}
-
+/*Sektionen med tre artiklar*/
 .textSection
 {
   display: flex;
   flex-direction: row; 
+  margin-top: 50px;
+}
+
+.article-picture{
+ max-width: 300px;
+ max-height: 200px;
+ margin-bottom: 20px;
 }
 
 /*Länkarna*/
@@ -182,7 +172,7 @@ margin-bottom: 50px;
 {
   padding: 10px;
   font-size: 16px;
-  color: white;
+  color: black;
   outline: none;
 }
 
@@ -192,7 +182,7 @@ margin-bottom: 50px;
 
 .textInfo
 {
-  color: white;
+  color: black;
   border-style: dotted;
   border-top: none;
   border-bottom: none; 
@@ -205,7 +195,7 @@ margin-bottom: 50px;
 
 .textInfo h2
 {
-  background-color: orange;
+  background-color: rgba(119, 115, 109, 0.342);
   display: inline;
 }
 
@@ -213,10 +203,11 @@ margin-bottom: 50px;
 .footer
 {
   padding: 20px;
-    height: 130px;
-    background-color: rgb(156, 90, 13);  
+    height: 120px;
+    background-color: black;  
     text-align: center;
     font-size: 12px;
+    color: white;
 }
 
 /* Kod för javascript så att ett meddelande går ut när man klickar på "skicka" knappen*/
@@ -239,15 +230,14 @@ margin-bottom: 50px;
     margin: 15px; 
     padding: 10px 30px; 
     text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.774), 0 0 25px rgba(255, 255, 255, 0.623), 0 0 5px rgba(255, 255, 255, 0.747);
-    background-image: linear-gradient(rgb(230, 149, 57), rgb(138, 79, 12));
+    background-image: linear-gradient(rgb(223, 218, 213), rgb(119, 115, 109));
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border: 1px solid rgba(255, 255, 255, 0.404);
-    border-top: none; 
     font-family: times new roman;
     font-size: 16px;
     cursor: pointer; 
     border-radius: 36px;
     transition: width 2s, height 2s, transform 2s;
+    border: none;
     }
 
     .button:focus

@@ -1,3 +1,4 @@
+
 *
 {
     box-sizing: border-box;
@@ -8,154 +9,205 @@
 body {
     display: flex;
   flex-direction: column;
+    background-color: white;
     font-family: times new roman; 
 }
 
-.parent-flex /*Detta är conteinern för alla flexboxes*/
-{
-    min-height: 100vh;
-    display: flex; 
-    flex-direction: column;
-    justify-content: space-between;
-  }
 
-.parent-flex > * 
-{
-    padding: 20px;
+  header {
+    background-image: url(img/night.jpg); 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center; 
+    height: 250px; 
+    position: relative; 
+}  
+
+.header-title{
+ color: white; 
+    font-size: 50px;
+    text-align: center;
+    margin-top: 30px;
+    letter-spacing: 4px;
+
 }
-
-.child1 /*Conteinern för headern*/
-{
-    height: 100px;
-    background: black; 
-    order: 1;
-    position: sticky;
-    top: 0;   
-}
-
-.headerTitle
-{
-  color: rgb(199, 194, 194);
-  padding: 10px;
-  margin-left: 40px;
-    text-align: left; 
-    letter-spacing: 2px;
-    display: inline-block;
-  
-}
-
-/* Här börjar menyn: vart menyn ska vara i headern */
-.meny
-{
-float: right; 
-margin-right: 40px;
-}
-
-.hamburger {
-  cursor: pointer;
-  background: black;
-  border: none; 
- }
-
- .hamburger:focus {
-   border: 2px solid white; 
-   outline: none;
- }
-
-.line 
-{
-  width: 25px; 
-  height: 1.5px; 
-  background: white;
-  margin: 5px;
-  display: block;
-}
-  
-  /* The container <div> - för att kunna positionera menyn */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Dropdown Content (Gömd genom display none) */
-  .dropdown-content {
-    text-align: left; 
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 100px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  /* länkar inne i menyn */
-  .dropdown-content a {
-    color: black;
-    padding: 12px 12px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Ändrar färg på menylänkarna när man hovrar över dem */
-  .dropdown-content a:hover {background-color: #bebdbd8e;}
-  
-  /* Visa menyn när man hovrar över meny */
-  .dropdown:hover .dropdown-content {
-
-    display: block;
-  }
-  
-  /* Ändrar bakgrundsfärgen på drop down menyn */
-  .dropdown:hover .dropbtn {
-    background-color: #bebdbd;
-  }
-
-/*Bilden på kontakt-sidan*/
-.headerPicture
-{
-  order: 2;
-  margin: 0;
-  padding: 0;
-}
-
-.headerPicture img 
-{
-  position: relative;
-  width: 100%;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-   z-index: -1;
  
+
+ /*Här börjar all kod för animerade menyn*/
+
+.nav-links
+{
+  display: flex;
+  list-style: none;
+  width: 100%;
+  height: 50%;
+  justify-content: space-around; 
+  align-items: center;
+  margin-left: auto;
+ }
+
+.nav-links li a 
+{
+  color:white;
+  text-decoration: none; 
+  font-size: 16px;
 }
+
+.nav-links a:focus
+{
+  padding: 10px;
+border: 2px solid white;
+outline: none;
+}
+
+@media screen and (min-width: 769px)
+{
+  .hamburger{
+    display: none;
+  }
+
+  ul{
+      background-color: black;
+      padding: 20px;
+  }
+
+  .nav-links a:hover{
+    color: orange;
+  }
+
+  .nav-links a:focus{
+    border: 1px solid white;
+    color: orange;
+  }
+}
+
+@media screen and (max-width: 768px)
+{
+  .line {
+      width: 30px;
+      height: 3px;
+      margin: 5px;
+      background: white;
+      display: block;
+  }
+
+  nav {
+      position: relative;
+  }
+
+  .hamburger {
+      position: absolute; 
+      cursor: pointer; 
+      right: 5%; 
+      top: 50%; 
+      transform: translate(-5%, -50%);
+      z-index: 2;
+     background-color: rgba(0, 0, 0, 0);
+      border: none;
+  }
+
+.hamburger:focus
+{
+  border: 2px solid white; 
+color: white;
+outline: none;
+}
+
+.nav-links{
+      position: fixed; 
+      background: black;
+      height: 100vh;
+      width: 100%;
+      flex-direction: column;
+      clip-path: circle(80px at 90% -10%);   
+      transition: all 1s ease-out; 
+      pointer-events: none;
+  }
+.nav-links.open {
+      clip-path: circle(1000px at 90% -10%); 
+      pointer-events: all; 
+  }
+
+  .nav-links a:hover{
+    color: orange;
+  }
+
+  .nav-links li {
+      opacity: 0;
+  }
+
+  .nav-links li a {
+      font-size: 20px;
+  }
+
+  .nav-links li:nth-child(1){
+      transition: all 0.5s ease 0.3s; 
+  }
+  .nav-links li:nth-child(2){
+      transition: all 0.5s ease 0.6s; 
+  }
+  .nav-links li:nth-child(3){
+      transition: all 0.5s ease 0.9s; 
+  }
+  li.fade{
+      opacity: 1;
+  }
+}
+
 
   /*flexbox - barn 3 med forumläret*/
 .contactForm{
-    background: #f1f1f1; 
-    order: 3;
-    text-align: center;
+  display: flex;
  }
 
-/*Här börjar koden för Kontakt formuläret*/ 
+
+/* ------ Här börjar CSS för Kontakt formuläret ------- */ 
+.contact-picture{
+  margin: 30px;
+  display: flex;
+  max-width: 40%;
+  margin-right: 40px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  flex-wrap: wrap;
+}
+
+/*Kontaktformuläret på kontaktsidan*/
 fieldset 
 {
-  padding: 20px;
-  background-color:rgb(199, 194, 194); 
+  border: none;
+  width: 100%;
+  display: flex; 
+  padding: 20px; 
   margin-top: 10px;
   margin-bottom: 30px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  justify-content: center; 
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* CSS för både kontakt form och prenumerations form */ 
+form{
+  display: flex;
+  flex-direction: column; 
 }
 
 /*Gör att input-rutorna är mjuka i kanterna*/
 fieldset input[type="text"], input[type="tel"], input[type="email"]
 {
+margin-bottom: 10px;
 padding: 7px 30px 7px 2px;
 border-radius: 4px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#bio{box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+#bio{box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); resize: none;}
+
+.bio:focus
+  {
+    border: 3px solid black; 
+    outline: none;
+  }
+
 
 form input[type="text"]
 {
@@ -184,29 +236,13 @@ fieldset input:focus
     outline: none;
   }
 
-.bio:focus
-  {
-    border: 3px solid black; 
-    outline: none;
-  }
-
-/*CSS animation*/
-@keyframes example {
-  from {font-weight: normal;}
-  to {font-weight: bold;}
-}
-
 /*Fyll i formuläret, så kommer vi att höra av oss!*/
 legend
 {
 font-size: 20px;
-margin-bottom: 40px;
+margin-top: 40px;
 padding: 10px;
 letter-spacing: 0.1em;
-animation-name: example;
-animation-duration: 8s;
-animation-iteration-count: infinite;
-animation-timing-function: ease-in-out;
 }
 
 /*Om man fyller i korrekt uppgifter i formuläret blir rutorna gröna*/
@@ -224,7 +260,7 @@ form input[type="text"]:focus, input[type="email"]:focus
 /*Obligatoriska fält-texten*/
 #required
 {
-  padding: 10px;
+  
   font-family: 'Times New Roman';
   font-size: 10px;
   }
@@ -238,10 +274,13 @@ form input[type="text"]:focus, input[type="email"]:focus
 
 .sendButton
 {
+  align-self: center;
+width: 25%;
+  margin-top: 20px;
     font-family: 'Times New Roman'; 
     font-size: 14px;
     color: black;
-    Padding: 7px 12px;
+    Padding: 2px;
     border-radius: 36px;
     text-decoration: none;
     background-image: linear-gradient(rgb(215, 218, 89), rgb(140, 189, 77));
@@ -263,24 +302,16 @@ form input[type="text"]:focus, input[type="email"]:focus
   .sendButton:hover
   {
     font-family: 'Times New Roman';
-    Padding: 7px 12px;
     color: rgb(22, 21, 21);
-    font-size: 14px;
     text-decoration: underline;
   }
 
 
 /*Footer-sektionen*/
-.child4
-{
-  padding: 20px;
-  min-height: 130px;
-  background-color: black;  
-  order: 4; 
-}
-
 footer 
 {
+  padding: 20px;
+  background-color: black; 
   color: rgb(199, 194, 194);
   text-align: center;
   font-size: 12px;
@@ -313,7 +344,7 @@ footer
 margin: 15px; 
 padding: 10px 30px; 
 text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.795), 0 0 25px rgba(255, 255, 255, 0.712), 0 0 5px rgba(255, 255, 255, 0.795);
-background-image: linear-gradient(rgb(199, 194, 194), rgb(116, 117, 114));
+background-image: linear-gradient(rgb(223, 218, 213), rgb(119, 115, 109));
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 border: 2px solid rgba(255, 255, 255, 0.603);
 border: none; 

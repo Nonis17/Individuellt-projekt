@@ -5,64 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="kontakt.css">
     <script defer src="index.js"></script>
+    <script defer src="menu.js"></script>
     <title>Kontakta oss</title>
     <meta name="description" content="Har du frågor eller funderingar? Släng iväg ett mail om du vill bli kontaktad av oss"/>
 </head>
 <body>
      
-    <main>
+   
+    <header>
+        <nav>
+            <h1 class="header-title">Klättring</h1>
         
-    <!--Parent conteiner, flexbox-->
-    <div class="parent-flex">
-
-        <!--First child item-->
-        <header class="child1">
-           <h1 class="headerTitle">Klättring: Kontakt</h1>
+            <div class="meny">
+         
+                 <button class="hamburger" aria-label="Menu">
+                     <span class="line"></span>
+                     <span class="line"></span>
+                     <span class="line"></span>
+                     </button>
         
-           <div class="meny">
-           <div class="dropdown">
-            <button class="hamburger" aria-label="menu">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-                </button>
-            <nav>
-            <div class="dropdown-content">
-              <a href="index.html">Home</a>
-              <a href="galleri.html">Galleri</a>
-              <a href="kontakt.html">Kontakt</a>
-            </div></nav>
-          </div> 
-        </div>
+        </nav>
         </header>
 
-<!--Second child item-->
-        <div class="headerPicture">
-            <img src="https://ct.counseling.org/wp-content/uploads/2015/11/Mountain-Climber-Help.jpg" alt="kontakt">
-        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="galleri.html">Galleri</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </div></ul>
 
+        <main>
 
-        <!--Kontaktformuläret third child item-->
-        <div class="contactForm">
-            
+    
+           
+
+<div class="contactForm">
                 <fieldset>
                 <legend>Fyll i formuläret, så kommer vi att höra av oss!</legend>
-                <form> <!-- "Form är containern för alla input-rutor-->
+                <img src="https://ct.counseling.org/wp-content/uploads/2015/11/Mountain-Climber-Help.jpg" class="contact-picture" alt="kontakt">
+               
+                <form> 
                     <label for="name">Namn *</label>
-                    <br>
+             
                     <input type="text" aria-labelledby="name" id="name" placeholder="namn" required minlength="2">
-                    <br><br>
-                    <label for="contactEmail">E-post *</label><br>
+           
+                    <label for="contactEmail">E-post *</label>
                     <input type="email" aria-labelledby="contactEmail" class="email" id="contactEmail" placeholder="e-post" required>
-                    <br><br>
-                    <label for="phone">Mobilnummer</label><br>
+             
+                    <label for="phone">Mobilnummer</label>
                     <input type="tel" aria-labelledby="phone" id="phone" name="telefon" placeholder="070"  pattern="[0-9]{10}" minlength="10">
                                              
                 <p id="required">*obligatoriska fält</p>
               
         <!-- en större boxruta att skriva text i-->
         <label for="bio"></label>
-        <textarea name="bio" aria-labelledby="bio" class="bio" id="bio" maxlength="140" cols="30" rows="18" placeholder="Skriv..." required></textarea>      
+        <textarea name="bio" aria-labelledby="bio" class="bio" id="bio" maxlength="100" cols="30" rows="10" placeholder="Skriv..." required></textarea>      
         <br><br>
                 <span class="reply"></span><br>
                 <br>
@@ -73,8 +69,8 @@
         </div>
         </main> 
 
-   <!--fourth child item i conteinern-->
-   <footer class="child4">
+  
+   <footer>
     <button class="button" aria-label="subscription window">Prenumerera på mitt nyhetsbrev!</button>
 
         <div class="button-bg">
@@ -94,9 +90,7 @@
     </div>  </div>
 
 
-        <p class ="footerText">Copyright 2020</p>
-        
-        
+    <p class ="footerText">Copyright 2020</p>        
       </footer>
     
 
