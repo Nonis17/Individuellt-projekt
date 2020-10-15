@@ -245,11 +245,6 @@ padding: 10px;
 letter-spacing: 0.1em;
 }
 
-/*Om man fyller i korrekt uppgifter i formuläret blir rutorna gröna*/
-form input#name:valid:not(:placeholder-shown){border: 2px solid rgb(33, 141, 33);}
-form input#contactEmail:valid:not(:placeholder-shown){border: 2px solid rgb(33, 141, 33);}
-form input#phone:valid:not(:placeholder-shown){border: 2px solid rgb(33, 141, 33);}
-
 
 form input[type="text"]:focus, input[type="email"]:focus
   {
