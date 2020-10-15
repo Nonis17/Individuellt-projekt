@@ -98,11 +98,12 @@ sendButton.addEventListener('click', function(event) {
     }
 
     if (textBio.value.length > 0 && emailContact.validity.valid && contactName.value.length > 1) {
-        reply.style.color = "black";
+      event.preventDefault();  
+      reply.style.color = "black";
         reply.textContent = "Tack! Vi svarar så fort vi kan"; 
     }
      else{
-        reply.style.color = "#9f0000";
+      document.querySelector(".reply").classList.add("invalidMessage");
         reply.textContent = "Fyll i de tomma fältet"; 
     }
 });
@@ -125,13 +126,3 @@ function showErrorEmail() {
   } 
 }
 
-
-//Klättergalleriet test ! 
-
-let btns = document.querySelectorAll('.pictures');
-
-for (i of btns) {
-  i.addEventListener('click', function() {
-    console.log(this);
-  });
-}

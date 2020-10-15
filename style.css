@@ -162,8 +162,8 @@ outline: none;
 }
 
 .article-picture{
- max-width: 300px;
- max-height: 200px;
+max-width: 200px;
+max-height: 200px;
  margin-bottom: 20px;
 }
 
@@ -200,7 +200,7 @@ outline: none;
 }
 
 /*Footer-sektionen*/
-.footer
+footer
 {
   padding: 20px;
     height: 120px;
@@ -404,27 +404,23 @@ form label
 /*Media queries för olika skärmstorlekar */
 
 @media only screen and (max-width: 1024px) {
-  .meny
-  {
-  float: right; 
-  margin-right: 200px;
-    }
+  .textInfo{
+    width: 30%;
+}
 }
 
 @media only screen and (max-width: 1366px) {
-  .meny
-  {
-  float: right; 
-  margin-right: 40px;
-    }
+  
+  .textInfo{
+      width: 30%;
+  }
 }
-
 
 @media only screen and (max-width: 600px) {
 
-  .headerTitle{font-size: 1em;}
+.header-title{font-size: 26px;}
 
-  .textSection
+.textSection
 {
   display: block;
   flex-direction: row;
@@ -435,8 +431,8 @@ footer{min-height: 150px;}
 
 @media only screen and (max-width: 300px) {
 
-  .child1{min-width: 100%;}
-
-  .headerTitle{font-size: 1em;}
-
+  .header-title
+  {
+    font-size: 20px;
+  }
 }

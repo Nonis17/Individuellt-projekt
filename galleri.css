@@ -412,3 +412,20 @@ form input[type="text"]:focus, input[type="email"]:focus
 
 
 
+/*test*/
+
+.animalText{
+  /*visibility: hidden;
+  opacity: 0;*/
+  margin: 5px;
+  
+  padding: 10px;
+}
+
+.animalText-active{
+  visibility: visible; 
+  opacity: 1;
+  margin: 5px;
+  border: 2px solid black;
+  padding: 10px;
+}

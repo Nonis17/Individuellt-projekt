@@ -163,9 +163,9 @@ outline: none;
 
 /* ------ Här börjar CSS för Kontakt formuläret ------- */ 
 .contact-picture{
-  margin: 30px;
+margin: 30px;
   display: flex;
-  max-width: 40%;
+  max-width: 50%;
   margin-right: 40px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   flex-wrap: wrap;
@@ -178,7 +178,7 @@ fieldset
   width: 100%;
   display: flex; 
   padding: 20px; 
-  margin-top: 10px;
+  margin-top: 40px;
   margin-bottom: 30px;
   justify-content: center; 
   align-items: center;
@@ -276,7 +276,7 @@ form input[type="text"]:focus, input[type="email"]:focus
 {
   align-self: center;
 width: 25%;
-  margin-top: 20px;
+  margin-top: 10px;
     font-family: 'Times New Roman'; 
     font-size: 14px;
     color: black;
