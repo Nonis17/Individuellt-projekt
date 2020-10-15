@@ -23,7 +23,7 @@ xButton.addEventListener('click', function() {
     buttonBg.classList.remove('bg-active');
 });
 
-/* ----- kod till formulärsvalideringen ------ */
+/* ----- kod till prenumerationsrutans formulärsvalidering ------ */
 
 const email = document.getElementById('prenumerationEmail');
 
@@ -62,6 +62,7 @@ thankYou.classList.add('thankYou-active');
       document.querySelector(".thankYou").classList.remove("invalidMessage");
       document.getElementById("prenumerationEmail").classList.remove("invalidForm");
       document.getElementById("prenumerationName").classList.remove("invalidForm");  
+      thankYou.style.color = "black";
       thankYou.textContent = "Tackar!";            
     }
 
@@ -77,6 +78,7 @@ thankYou.classList.add('thankYou-active');
       document.getElementById("prenumerationEmail").classList.add("invalidForm");
       document.getElementById("prenumerationName").classList.add("invalidForm");    
       thankYou.textContent = "Fyll i namn och e-postadress"; 
+      return;
     }
  
 //Om man inte skriver ett tillräckligt långt namn: 
@@ -85,6 +87,7 @@ thankYou.classList.add('thankYou-active');
       document.getElementById("prenumerationName").classList.add("invalidForm"); 
       document.getElementById("prenumerationEmail").classList.remove("invalidForm"); 
       thankYou.textContent = "Fyll i namn";  
+      return;
     }
 });
 

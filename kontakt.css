@@ -1,18 +1,16 @@
 
-*
-{
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
-    display: flex;
+  display: flex;
   flex-direction: column;
-    background-color: white;
-    font-family: times new roman; 
+  background-color: white;
+  font-family: arial; 
 }
-
 
   header {
     background-image: url(img/night.jpg); 
@@ -29,11 +27,10 @@ body {
     text-align: center;
     margin-top: 30px;
     letter-spacing: 4px;
-
 }
  
 
- /*Här börjar all kod för animerade menyn*/
+ /* ----- Här börjar all kod för animerade menyn -----*/
 
 .nav-links
 {
@@ -154,14 +151,11 @@ outline: none;
   }
 }
 
-
-  /*flexbox - barn 3 med forumläret*/
+/* ------ Här börjar CSS för Kontakt formuläret ------- */ 
 .contactForm{
   display: flex;
  }
 
-
-/* ------ Här börjar CSS för Kontakt formuläret ------- */ 
 .contact-picture{
 margin: 30px;
   display: flex;
@@ -237,10 +231,10 @@ fieldset input:focus
   }
 
 /*Fyll i formuläret, så kommer vi att höra av oss!*/
-legend
+.formTitle
 {
 font-size: 20px;
-margin-top: 40px;
+margin: 40px;
 padding: 10px;
 letter-spacing: 0.1em;
 }
@@ -255,8 +249,6 @@ form input[type="text"]:focus, input[type="email"]:focus
 /*Obligatoriska fält-texten*/
 #required
 {
-  
-  font-family: 'Times New Roman';
   font-size: 10px;
   }
 
@@ -272,7 +264,6 @@ form input[type="text"]:focus, input[type="email"]:focus
   align-self: center;
 width: 25%;
   margin-top: 10px;
-    font-family: 'Times New Roman'; 
     font-size: 14px;
     color: black;
     Padding: 2px;
@@ -296,7 +287,6 @@ width: 25%;
   
   .sendButton:hover
   {
-    font-family: 'Times New Roman';
     color: rgb(22, 21, 21);
     text-decoration: underline;
   }
@@ -343,7 +333,6 @@ background-image: linear-gradient(rgb(223, 218, 213), rgb(119, 115, 109));
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 border: 2px solid rgba(255, 255, 255, 0.603);
 border: none; 
-font-family: times new roman; 
 font-size: 16px;
 cursor: pointer; 
 border-radius: 36px;
@@ -361,7 +350,6 @@ transition: width 2s, height 2s, transform 2s;
 .button:hover /*När man hovrar över prenumerera knappen*/
 {
 border: none; 
-font-family: times new roman; 
 cursor: pointer; 
 border-radius: 36px;
 transform: rotate(360deg);
@@ -400,7 +388,6 @@ text-decoration: underline;
 {
   color: black;
   position: relative;
-  font-family: times new roman; 
   background-color:white; 
   min-width: 30%;
   min-height: 30%;
@@ -420,7 +407,6 @@ text-decoration: underline;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border: 2px solid rgba(255, 255, 255, 0.603); 
   border-top: none;
-  font-family: times new roman; 
   cursor: pointer; 
   border-radius: 36px;
   }
@@ -433,7 +419,6 @@ text-decoration: underline;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         border: 2px solid rgba(255, 255, 255, 0.603); 
         border-top: none;
-        font-family: times new roman; 
         cursor: pointer; 
         border-radius: 36px;
         text-decoration:underline;
@@ -464,7 +449,6 @@ text-decoration: underline;
   position: absolute;
   top: 10px;
   right: 13px; 
-  font-family: times new roman; 
   font-size: 8px;
   cursor: pointer;
 }
@@ -481,8 +465,6 @@ text-decoration: underline;
   .headerTitle{font-size: 1em; margin-left: 0; margin-top: 19px; padding: 0;}
 
   .meny{margin-right: 0px;}
-
-
 }
 
 /* ----- Till JavaScripts valideringen ------ */

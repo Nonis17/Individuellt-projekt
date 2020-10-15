@@ -2,13 +2,13 @@ let animal = [
     {
         name: "Bear",
         tag: "bear",
-        description: "Björnar kan klättra i träd, en grizzly björn har lättare för att klättra än t ex en svartbjörn, men de klättrar bara upp i trädet om trädet är tillräckligt tjockt med stora grenar.",
+        description: "Björnar kan klättra i träd, en grizzly björn har lättare för att klättra än t ex en svartbjörn, men de klättrar bara upp i trädet om trädet är tillräckligt tjockt med stora grenar. Annars välter nog trädet :-)",
     
     },
     {
         name: "Squirrel",
         tag: "squirrel",
-        description: "Ekorrar är mästare på att klättra, de kan även kasta sig mellan olika träd så de nästan ser ut som att de flyger fram i lfuten.",
+        description: "Ekorrar är mästare på att klättra, de kan även kasta sig mellan olika träd så de nästan ser ut som att de flyger fram i luften. Små och smidiga varelser!",
       
     },
     {
@@ -20,13 +20,13 @@ let animal = [
     {
         name: "Raccoon",
         tag: "raccoon",
-        description: "En förmåga tvättbjörnar är kända för är just klättring. Tvättbörjarnas fysik hjälper dem: De två bakbenen är längre än frambenen, och de har tassar som har 5 tår vardera; tårna på dess främre tassar är väldigt smidiga och kan greppa små avsatser eller sprickor i väggen. Tvättbjörnar kan bära sina ungar i munnen medan de klättrar upp höga träd.",
+        description: "En förmåga tvättbjörnar är kända för är just klättring. De två bakbenen är längre än frambenen, och de har tassar som har fem tår vardera; tårna på dess främre tassar är väldigt smidiga och kan greppa väldigt små grepp. Tvättbjörnar kan med enkelhet bära sina ungar i munnen medan de klättrar upp i höga träd.",
        
     },
     {
         name: "Elephant",
         tag: "elephant",
-        description: "Jag vill gärna tro att elefanter kan klättra, men de är fint att de iallafall försöker. Man ska alltid försöka.",
+        description: "Lite förvånad över elefanten? Jag vill gärna tro att elefanter kan klättra, men de är fint att de iallafall försöker. Man ska alltid försöka.",
       
     },
     {
@@ -44,7 +44,7 @@ let animal = [
     {
         name: "Koala",
         tag: "koala", 
-        description: "Koalor har riktigt vassa klor som hugger sig in i stammen på trädet så att de får riktigt bra grepp och inte faller ned.",
+        description: "Koalor har riktigt vassa klor som hugger sig in i stammen på trädet så att de får riktigt bra grepp. På så sätt kan koalor sova uppe i träden och inte falla ned. ",
     }
 ];
 
