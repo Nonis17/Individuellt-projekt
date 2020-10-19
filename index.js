@@ -116,6 +116,7 @@ if (contactName.value.length < 1 && emailContact.value.length < 1) {
 //Om man fyllt i namn, korrekt epostadress och text i textrutan: 
     if (textBio.value.length > 0 && emailContact.validity.valid && contactName.value.length > 0) {
       event.preventDefault();  
+      document.getElementById("name").classList.remove("invalidForm");
       document.getElementById("contactEmail").classList.remove("invalidForm");
       reply.style.color = "black";
         reply.textContent = "Tack! Vi svarar så fort vi kan"; 
